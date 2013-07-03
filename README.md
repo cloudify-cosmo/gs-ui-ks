@@ -1,7 +1,6 @@
 
 
 
-
 # To set up projects like this one do the following :
 
 
@@ -25,7 +24,7 @@
 
 1. grunt server - runs the server with "watch" capabilities (it reloads when you change the scss files).
 1. IDEs should ignore the following folders
-1.1. dist
-1.1. .tmp
-1.1. .sass-cache
-1.1. node_modules
+ 1. dist
+ 1. .tmp
+ 1. .sass-cache
+ 1. node_modules
