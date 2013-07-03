@@ -1,7 +1,6 @@
 
 
-
-# To set up projects like this one do the following :
+# To set up projects like this one do the following:
 
 
 1. Install ruby (I used 1.8)
