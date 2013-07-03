@@ -29,3 +29,26 @@
 1.1. .tmp
 1.1. .sass-cache
 1.1. node_modules
+
+## Adding new angular items
+
+To add new angular items such as "directive" or "controller" etc..
+You need to use yeoman generators.
+Since we used "https://npmjs.org/package/generator-express-angular" to generate this project
+you can freely use all supported generators for angular.
+
+For example - a new directive should be made with
+`yo angular:directive myDirectiveName`
+
+This will create the directive file and a test file.
+
+
+# Remote debug
+
+Thanks to stackoverflow's answer
+http://stackoverflow.com/a/13443026/1068746
+
+You can easily remote debug node with the flag `--debug-brk`.
+
+Since Grunt is usually executed directly `grunt args` - to debug it you need to do
+`node --debug-brk /full/path/to/grunt myTask`
