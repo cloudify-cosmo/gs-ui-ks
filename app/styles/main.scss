@@ -1,6 +1,94 @@
 @import "compass_twitter_bootstrap";
 
+/*
+colors:
+  #edf7fc
+  #78a8c9
+  #6098bf
+  #5086ab
+  #0a66a3
+  #007cbf
+*/
 
+/* reset */
+p {
+  margin: 0;
+  padding: 0;
+}
 
+/* helpers */
+.right-text {
+  text-align: right;
+}
 
+/* baseline */
+body {
+  font: 16px/1.4 tahoma, arial, sans-serif;
+  color: #0a66a3;
+  background-color: #fff;
+}
+code, pre {
+  font-size: .85em;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: .8em 0 .2em;
+}
+dt {
+  margin: .4em 0;
+}
+dd {
+  margin: .4em 0 .8em 1.2em;
+}
 
+/* custom */
+header {
+  height: 180px;
+  padding: 1.2em;
+  text-align: center;
+  color: #fff;
+  background-color: #0a66a3;
+  h1 {
+    font-size: 3.5em;
+    margin-bottom: .4em;
+  }
+  h2 {
+    font-size: 1.1em;
+    color: #edf7fc;
+  }
+}
+footer {
+  height: 60px;
+  padding: 1.2em;
+  color: #edf7fc;
+  background-color: #78a8c9;
+}
+.getting-started {
+  padding: .4em 0 2em;
+  color: #0a66a3;
+  background-color: #edf7fc;
+  box-shadow: 0 0 16px #555;
+  h3 {
+    font-size: 1.1em;
+  }
+}
+.component {
+  padding-top: 1em;
+  h3+hr {
+    margin-top: 0;
+  }
+  label {
+    width: 250px;
+    margin-right: 1em;
+    line-height: 2;
+    clear: left;
+  }
+  label, label+input {
+    float: left;
+  }
+  input[type='number'] {
+    width: 80px;
+  }
+  .controls {
+    overflow: auto;
+  }
+}
