@@ -105,14 +105,13 @@
                     </dl>
                 </dd>
             </dl>
-
         </div>
         <hr class="grid-100"/>
         <div class="source grid-100">
             <tabset>
                 <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                    <!-- TODO codemirror it -->
-                    <pre><code>{{tab.content}}</code></pre>
+                    <!-- TODO correct language attribute not being injected into directive -->
+                    <codeblock language="tab.language" source="tab.content"></codeblock>
                 </tab>
             </tabset>
         </div>

@@ -91,3 +91,13 @@ footer {
     }
   }
 }
+
+.codeblock {
+  font-size: 1.1em;
+  overflow: auto;
+}
+.tab-pane {
+  .codeblock {
+    height: 140px;
+  }
+}

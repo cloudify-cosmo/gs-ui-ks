@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('GaugesCtrl', function ($scope) {
+    .controller('GaugesCtrl', ['$scope', 'gs.config', function ($scope, gsConfig) {
 
         // only one gauge at the moment
         $scope.gauge = {
@@ -45,11 +45,27 @@ angular.module('gsUiKsApp')
             return v;
         };
 
-        $scope.tabs = [
-            // TODO is there a better way to do this?
-            { title: 'Markup', content: '<gs-gauge sensitivity="gauge.sensitivity" val="gauge.val" colors="gauge.themes.sky"></gs-gauge>' },
-            // TODO is there a better way to do this?
-            { title: 'JavaScript', content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2) }
-        ];
 
-    });
+        $scope.tabsMeta = {
+            html: {
+                title: 'Markup',
+                language: gsConfig.codeblock.html
+            },
+            javascript: {
+                title: 'JavaScript',
+                language: gsConfig.codeblock.javascript
+            }
+        };
+
+        $scope.tabs = [
+            // TODO is there a better way to get source code (perhaps $http or $resource)?
+            {
+                title: $scope.tabsMeta.html.title,
+                content: '<gs-gauge sensitivity="gauge.sensitivity" val="gauge.val" colors="gauge.themes.sky"></gs-gauge>'
+            },
+            {
+                title: $scope.tabsMeta.javascript.title,
+                content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2)
+            }
+        ];
+  }]);
