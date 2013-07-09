@@ -13,10 +13,11 @@ angular.module('gsUiKsApp')
                     // gauge should be more lenient:
                     // if only one color is provided (string / single arg array),
                     // it should be applied throughout the colors array
-                    background: ['lightyellow', 'lightyellow'],
+                    background: ['lightyellow', 'yellow'],
                     basis: ['orange', 'red'],
                     tick: 'red',
-                    dial: ['orange', 'orange', 'orange', 'orange', 'orange'],
+                    // this is a dirty, dirty hack to set transparent values - we should allow setting 'none'
+                    dial: ['','','','',''],
                     pointer: ['red', 'orange', 'lightyellow'],
                     border: 'orange'
                 },
