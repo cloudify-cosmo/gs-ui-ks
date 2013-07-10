@@ -18,7 +18,7 @@ angular.module('gsUiKsApp')
                 };
 
                 var getPointerRotation = function(angle) {
-                    return 'R' + angle + ',41.986123,170';
+                    return 'R' + angle + ',41.986123,120';
                 };
 
                 var getPathOuterWidth = function(path) {
@@ -40,8 +40,8 @@ angular.module('gsUiKsApp')
 
                 var _basis,
                     _pointer,
-                    _minAngle = -11,
-                    _maxAngle = 11,
+                    _minAngle = -17.4,
+                    _maxAngle = 17.1,
                     _pathArr = [],
                     _r = new Raphael(element[0], '100%', '100%'),
                     _dialSet = _r.set(),
