@@ -23,21 +23,29 @@ p {
 
 /* baseline */
 body {
-  font: 16px/1.4 tahoma, arial, sans-serif;
-  color: #0a66a3;
+  font: 15px/1.4 tahoma, arial, sans-serif;
+  color: #555;
   background-color: #fff;
-}
-code, pre {
-  font-size: .85em;
 }
 h1,h2,h3,h4,h5,h6 {
   margin: .8em 0 .2em;
+  color: #0a66a3;
 }
-dt {
-  margin: .4em 0;
-}
-dd {
-  margin: .4em 0 .8em 1.2em;
+dl {
+  dt {
+    margin: .4em 0;
+    font-weight: normal;
+    font-style: italic;
+    color: #0a66a3;
+    code {
+      padding: .3em .4em .2em;
+      font-style: normal;
+      color: #0a66a3;
+    }
+  }
+  dd {
+    margin: .4em 0 .8em 1.2em;
+  }
 }
 
 /* custom */
@@ -45,11 +53,11 @@ header {
   height: 180px;
   padding: 1.2em;
   text-align: center;
-  color: #fff;
   background-color: #0a66a3;
   h1 {
     font-size: 3.5em;
     margin-bottom: .4em;
+    color: #fff;
   }
   h2 {
     font-size: 1.1em;
@@ -96,9 +104,6 @@ pre.codeblock {
   overflow: auto;
   background-color: #fafafa;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  code {
-    font-size: 15px;
-  }
 }
 .tab-pane {
   .codeblock {
