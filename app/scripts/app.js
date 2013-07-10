@@ -20,6 +20,7 @@ angular.module('gsUiKsApp', ['ui.bootstrap'])
         }
     })
     .value('gs.config', {
+        // TODO consider moving this to constants
         codeblock: {
             language: {
                 html: 'html',

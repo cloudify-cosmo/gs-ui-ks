@@ -75,20 +75,20 @@
         <div class="description grid-50">
             <h4>Options</h4>
             <dl>
-                <dt><code>sensitivity</code></dt>
+                <dt><code>sensitivity: number</code></dt>
                 <dd>
                     Controls the pointer animation speed, the higher the sensitivity, the lower the speed.
                     Values are in the range of 0 to 20, where the maximum value will result in immediate
                     response, i.e. without transition animation.
                 </dd>
-                <dt><code>val</code></dt>
+                <dt><code>val: number</code></dt>
                 <dd>
                     Sets the value for the gauge, in the range of 0 to 100.
                 </dd>
-                <dt><code>colors</code></dt>
+                <dt><code>colors: object</code></dt>
                 <dd>
-                    The color theme can be configured using the <code>colors</code> attribute, which will provide
-                    an object with the following properties, as CSS color values:
+                    Configures the color theme by providing an object with the following properties,
+                    as CSS color values:
                     <dl>
                         <dt><code>border: string</code></dt>
                         <dd>The border color.</dd>
