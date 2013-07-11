@@ -262,8 +262,6 @@ module.exports = function (grunt) {
 
   grunt.renameTask('regarde', 'watch');
 
-
-
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
