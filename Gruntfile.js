@@ -262,7 +262,7 @@ module.exports = function (grunt) {
 
   grunt.renameTask('regarde', 'watch');
 
-    debugger;
+
 
   grunt.registerTask('server', [
     'clean:server',
@@ -294,7 +294,7 @@ module.exports = function (grunt) {
     'cssmin',
     'htmlmin',
     'copy',
-    'cdnify',
+//    'cdnify', //-- guy - we do not want google CDN resources.
     'ngmin',
     'uglify',
     'rev',
