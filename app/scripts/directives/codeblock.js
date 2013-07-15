@@ -12,7 +12,7 @@ angular.module('gsUiKsApp')
                 var codeEl = element.find('code');
                 codeEl.attr('data-language', attrs.language);
 
-                console.log(attrs)
+                console.log(attrs);
                 scope.$watch(attrs.source, function(value) {
                     codeEl.html(value);
                 });

@@ -8,7 +8,11 @@
     "angular-resource": "~1.0.5",
     "angular-cookies": "~1.0.5",
     "angular-sanitize": "~1.0.5",
-	"raphael": "latest"
+    "rainbow":"1.1.9",
+      "unsemantic":"latest",
+      "angular-bootstrap":"0.4.0",
+	"raphael": "latest",
+     "gs-ui-infra":"git://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git"
 },
   "devDependencies": {
     "angular-mocks": "~1.0.5",

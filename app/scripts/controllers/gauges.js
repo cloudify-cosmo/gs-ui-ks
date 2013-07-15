@@ -17,7 +17,7 @@ angular.module('gsUiKsApp')
                     basis: ['orange', 'red'],
                     tick: 'red',
                     // this is a dirty, dirty hack to set transparent values - we should allow setting 'none'
-                    dial: ['','','','',''],
+                    dial: ['', '', '', '', ''],
                     pointer: ['red', 'orange', 'lightyellow'],
                     border: 'orange'
                 },
@@ -40,8 +40,10 @@ angular.module('gsUiKsApp')
             }
         };
 
-        $scope.themeReplacer = function(k, v) {
-            if (k === 'fire' || k === 'grayscale') return undefined;
+        $scope.themeReplacer = function (k, v) {
+            if (k === 'fire' || k === 'grayscale') {
+                return undefined;
+            }
             return v;
         };
 
@@ -68,4 +70,4 @@ angular.module('gsUiKsApp')
                 content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2)
             }
         ];
-  }]);
+    }]);

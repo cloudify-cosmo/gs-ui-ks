@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gsUiKsApp', ['ui.bootstrap'])
+angular.module('gsUiKsApp', ['ui.bootstrap','gsUiInfra'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -9,15 +9,16 @@ angular.module('gsUiKsApp', ['ui.bootstrap'])
             })
             .otherwise({
                 redirectTo: '/'
-            })
+            });
     })
     .factory('rainbow', function () {
         return {
-            highlight: function(e) {
+            highlight: function (e) {
+
                 // see: http://craig.is/making/rainbows/
-                Rainbow.color(e);
+                window.Rainbow.color(e);
             }
-        }
+        };
     })
     .value('gs.config', {
         // TODO consider moving this to constants
