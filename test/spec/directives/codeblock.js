@@ -6,7 +6,8 @@ describe('Directive: codeblock', function () {
   var element;
 
   it('should make hidden element visible', inject(function ($rootScope, $compile) {
-    element = angular.element('<div codeblock></div>');
+      $rootScope.mySrc = "this is the codeblock directive";
+    element = angular.element('<div codeblock source="mySrc"></div>');
     element = $compile(element)($rootScope);
     expect(element.text()).toBe('this is the codeblock directive');
   }));
