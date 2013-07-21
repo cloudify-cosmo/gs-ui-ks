@@ -42,7 +42,7 @@
                 <input id="gauge-val" name="gauge-val" type="number" step="10" min="0" max="100"
                        ng-model="gauge.val"/>
                 <label for="gauge-anim">Sensitivity</label>
-                <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="20"
+                <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="10"
                        ng-model="gauge.sensitivity"/>
             </div>
             <hr/>
@@ -78,9 +78,8 @@
             <dl>
                 <dt><code>sensitivity</code> number</dt>
                 <dd>
-                    Controls the pointer animation speed, the higher the sensitivity, the higher the speed.
-                    Values are in the range of 0 to 20, where the maximum value will result in immediate
-                    response, i.e. without transition animation.
+                    Controls the pointer animation speed, expressed in values in the range of 0 to 10.
+                    The higher the sensitivity, the higher the speed.
                 </dd>
                 <dt><code>val</code> number</dt>
                 <dd>

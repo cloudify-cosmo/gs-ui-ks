@@ -5,7 +5,7 @@ angular.module('gsUiKsApp')
 
         // only one gauge at the moment
         $scope.gauge = {
-            sensitivity: 18,
+            sensitivity: 8,
             val: 20,
             themes: {
                 fire: {

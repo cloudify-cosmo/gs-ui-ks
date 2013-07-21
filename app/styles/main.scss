@@ -1,14 +1,21 @@
+
+/* our variables */
+$color1: #edf7fc;
+$color2: #78a8c9;
+$color3: #6098bf;
+$color4: #5086ab;
+$color5: #007cbf;
+$color6: #0a66a3;
+
+/* bootstrap customization */
+$bodyBackground: #fff;
+$textColor: #555;
+$baseFontFamily: tahoma, arial, sans-serif;
+$codeblockBackground: #fafafa;
+
+/* TODO should we use compass_twitter_bootstrap_responsive ? */
 @import "compass_twitter_bootstrap";
 
-/*
-colors:
-  #edf7fc
-  #78a8c9
-  #6098bf
-  #5086ab
-  #0a66a3
-  #007cbf
-*/
 
 /* reset */
 p {
@@ -22,25 +29,20 @@ p {
 }
 
 /* baseline */
-body {
-  font: 15px/1.4 tahoma, arial, sans-serif;
-  color: #555;
-  background-color: #fff;
-}
 h1,h2,h3,h4,h5,h6 {
   margin: .8em 0 .2em;
-  color: #0a66a3;
+  color: $color6;
 }
 dl {
   dt {
     margin: .4em 0;
     font-weight: normal;
     font-style: italic;
-    color: #0a66a3;
+    color: $color6;
     code {
       padding: .3em .4em .2em;
       font-style: normal;
-      color: #0a66a3;
+      color: $color6;
     }
   }
   dd {
@@ -50,10 +52,10 @@ dl {
 
 /* custom */
 header {
-  height: 180px;
+  height: 180px; /* TODO don't use explicit height, this will cause content overflow on narrow layouts */
   padding: 1.2em;
   text-align: center;
-  background-color: #0a66a3;
+  background-color: $color6;
   h1 {
     font-size: 3.5em;
     margin-bottom: .4em;
@@ -61,20 +63,20 @@ header {
   }
   h2 {
     font-size: 1.1em;
-    color: #edf7fc;
+    color: $color1;
   }
 }
 footer {
   height: 60px;
   padding: 1.2em;
-  color: #edf7fc;
-  background-color: #78a8c9;
+  color: $color1;
+  background-color: $color2;
 }
 .getting-started {
   padding: .4em 0 2em;
-  color: #0a66a3;
-  background-color: #edf7fc;
-  box-shadow: 0 0 16px #555;
+  color: $color6;
+  background-color: $color1;
+  box-shadow: 0 0 16px $textColor;
   h3 {
     font-size: 1.1em;
   }
@@ -102,7 +104,7 @@ footer {
 
 pre.codeblock {
   overflow: auto;
-  background-color: #fafafa;
+  background-color: $codeblockBackground;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .tab-pane {
