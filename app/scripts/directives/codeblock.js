@@ -3,7 +3,7 @@
 angular.module('gsUiKsApp')
     .directive('codeblock', ['$timeout', 'rainbow', function (timer, syntax) {
         return {
-            template: '<pre class="codeblock"><code>this is the codeblock directive</code></pre>',
+            template: '<pre class="codeblock"><code></code></pre>',
             restrict: 'A',
             replace: true,
             scope: true,
@@ -14,6 +14,7 @@ angular.module('gsUiKsApp')
                 scope.$watch(attrs.source, function(value) {
                     codeEl.html(value);
                 });
+
                 timer(function () {
                     syntax.highlight(element);
                 }, 0);
