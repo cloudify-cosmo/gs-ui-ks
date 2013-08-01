@@ -111,7 +111,7 @@
             <tabset>
                 <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
                     <!-- TODO correct language attribute not being injected into directive -->
-                    <codeblock language="tab.language" source="tab.content"></codeblock>
+                    <div codeblock language="tab.language" source="tab.content"></div codeblock>
                 </tab>
             </tabset>
         </div>
