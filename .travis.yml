@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "0.10"
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+before_script:
+  - npm install -g bower
+  - bower install
+notifications:
+  email:
+    - guym@gigaspaces.com
+    - eliranm@gigaspaces.com
+    - evgeny@gigaspaces.com
+    - erez@gigaspaces.com
+
+#    on_success: [always|never|change] # default: change
+#    on_failure: [always|never|change] # default: always

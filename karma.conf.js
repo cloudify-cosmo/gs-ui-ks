@@ -1,56 +1,80 @@
 // Karma configuration
+// Generated on Sun Jul 21 2013 16:35:32 GMT+0300 (IDT)
 
-// base path, that will be used to resolve files and exclude
-basePath = '';
+module.exports = function(karma) {
+  karma.configure({
 
-// list of files / patterns to load in the browser
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-  'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-mocks/angular-mocks.js',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-];
+    // base path, that will be used to resolve files and exclude
+    basePath: '',
 
-// list of files to exclude
-exclude = [];
 
-// test results reporter to use
-// possible values: dots || progress || growl
-reporters = ['progress'];
+    // frameworks to use
+    frameworks: ['jasmine'],
 
-// web server port
-port = 8080;
 
-// cli runner port
-runnerPort = 9100;
+    // list of files / patterns to load in the browser
+    files: [
+        'app/bower_components/angular/angular.js',
+        'app/bower_components/angular-mocks/angular-mocks.js',
+        'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+        'app/bower_components/gs-ui-infra/app/scripts/app.js',
+        'app/scripts/*.js',
+        'app/scripts/**/*.js',
+        'test/mock/**/*.js',
+        'test/spec/**/*.js',
+        'test/utils/**/*.js'
+    ],
 
-// enable / disable colors in the output (reporters and logs)
-colors = true;
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_INFO;
+    // list of files to exclude
+    exclude: [
+      
+    ],
 
-// enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
 
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-browsers = ['Chrome'];
+    // test results reporter to use
+    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
+    reporters: ['progress'],
 
-// If browser does not capture in given timeout [ms], kill it
-captureTimeout = 5000;
 
-// Continuous Integration mode
-// if true, it capture browsers, run tests and exit
-singleRun = false;
+    // web server port
+    port: 9876,
+
+
+    // cli runner port
+    runnerPort: 9100,
+
+
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
+
+
+    // level of logging
+    // possible values: karma.LOG_DISABLE || karma.LOG_ERROR || karma.LOG_WARN || karma.LOG_INFO || karma.LOG_DEBUG
+    logLevel: karma.LOG_INFO,
+
+
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
+
+
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    browsers: ['Chrome'],
+
+
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
+
+
+    // Continuous Integration mode
+    // if true, it capture browsers, run tests and exit
+    singleRun: false
+  });
+};

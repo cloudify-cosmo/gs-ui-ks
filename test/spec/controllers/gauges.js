@@ -5,11 +5,14 @@ describe('Controller: GaugesCtrl', function () {
   // load the controller's module
   beforeEach(module('gsUiKsApp'));
 
+
   var GaugesCtrl,
     scope;
 
+
+
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
+  beforeEach(window.inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     GaugesCtrl = $controller('GaugesCtrl', {
       $scope: scope
@@ -17,6 +20,6 @@ describe('Controller: GaugesCtrl', function () {
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+      expect(scope.gauge.themes.hasOwnProperty('grayscale'));
   });
 });

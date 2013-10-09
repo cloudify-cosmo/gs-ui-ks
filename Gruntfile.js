@@ -105,7 +105,13 @@ module.exports = function (grunt) {
         karma: {
             unit: {
                 configFile: 'karma.conf.js',
-                singleRun: true
+                singleRun: true,
+                autoWatch:false,
+                browsers: ['Chrome']
+            },
+            watch:{
+                configFile:'karma.conf.js',
+                singleRun:false
             }
         },
         coffee: {
@@ -293,8 +299,13 @@ module.exports = function (grunt) {
         'coffee',
         'compass',
         'connect:test',
-        'karma'
+        'karma:unit'
     ]);
+
+    grunt.registerTask('karmaWatch', [
+        'karma:watch'
+    ]);
+
 
     grunt.registerTask('build', [
         'clean:dist',
