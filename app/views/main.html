@@ -1,6 +1,6 @@
 <header>
     <hgroup class="grid-container">
-        <h1>UI Kitchen Sink</h1>
+        <h1>GS UI Components</h1>
         <h2>Reusable Components for the GigaSpaces Management Console</h2>
     </hgroup>
 </header>
@@ -19,12 +19,9 @@
 
         <p>
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur
-            sodales
-            ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In
-            scelerisque
-            sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.
-            Morbi
-            lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+            sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In
+            scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+            porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
         </p>
     </div>
 </div>
@@ -118,6 +115,39 @@
     </div>
     <!-- gauges end -->
     <hr/>
+
+    <div class="component grid-100" ng-controller="TopologyCtrl">
+        <h3 class="heading grid-100">Topology</h3>
+        <hr/>
+        <div class="demo grid-50">
+            <div class="controls grid-100">
+<!--
+                <label for="layout-padding">Value</label>
+                <input id="layout-padding" name="layout-padding" type="number" step="10" min="10" max="100"
+                       ng-model="topology.layout.padding"/>
+-->
+            </div>
+            <hr/>
+            <div class="demo">
+                <div class="grid-container">
+                    <topology class="grid-100" data="topology.graphData"></topology>
+                </div>
+            </div>
+        </div>
+        <div class="description grid-50">
+        </div>
+        <hr class="grid-100"/>
+        <div class="source grid-100">
+            <tabset>
+                <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                    <!-- TODO correct language attribute not being injected into directive -->
+                    <codeblock language="tab.language" source="tab.content"></codeblock>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+    <!-- topology end -->
+    <hr />
 
 </div>
 

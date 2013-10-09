@@ -3,16 +3,11 @@
 angular.module('gsUiKsApp')
     .controller('GaugesCtrl', ['$scope', 'gs.config', function ($scope, gsConfig) {
 
-        // only one gauge at the moment
         $scope.gauge = {
             sensitivity: 8,
             val: 20,
             themes: {
                 fire: {
-                    // TODO
-                    // gauge should be more lenient:
-                    // if only one color is provided (string / single arg array),
-                    // it should be applied throughout the colors array
                     background: ['lightyellow', 'yellow'],
                     basis: ['orange', 'red'],
                     tick: 'red',
