@@ -52,7 +52,43 @@ angular.module('gsUiKsApp')
                     ]
                 },
                 tree: {
-
+                    "id": "root",
+                    "children": [
+                        {
+                            "id": 0,
+                            "type": ["cloudify.tosca.types.network"],
+                            "dependencies": [3],
+                            "children": [
+                                {
+                                    "id": 2,
+                                    "type": ["cloudify.tosca.types.tier"],
+                                    "children": [
+                                        {
+                                            "id": 3,
+                                            "type": ["cloudify.tosca.types.host"],
+                                            "children": [
+                                                {
+                                                    "id": 4,
+                                                    "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"],
+                                                    "children": [
+                                                        {
+                                                            "id": 5,
+                                                            "type": ["cloudify.tosca.types.app_module"]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 1,
+                                    "type": ["cloudify.tosca.types.tier"],
+                                    "dependencies": [4,5]
+                                }
+                            ]
+                        }
+                    ]
                 }
             }
         };
