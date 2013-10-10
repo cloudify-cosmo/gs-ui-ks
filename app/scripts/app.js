@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp', ['ui.bootstrap','gsUiInfra'])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
@@ -14,7 +14,6 @@ angular.module('gsUiKsApp', ['ui.bootstrap','gsUiInfra'])
     .factory('rainbow', function () {
         return {
             highlight: function (e) {
-
                 // see: http://craig.is/making/rainbows/
                 window.Rainbow.color(e);
             }

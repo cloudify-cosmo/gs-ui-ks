@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('GaugesCtrl', ['$scope', 'gs.config', function ($scope, gsConfig) {
+    .controller('GaugesCtrl', ['$scope', function ($scope) {
 
         $scope.gauge = {
             sensitivity: 8,
@@ -40,18 +40,6 @@ angular.module('gsUiKsApp')
                 return undefined;
             }
             return v;
-        };
-
-
-        $scope.tabsMeta = {
-            html: {
-                title: 'Markup',
-                language: gsConfig.codeblock.html
-            },
-            javascript: {
-                title: 'JavaScript',
-                language: gsConfig.codeblock.javascript
-            }
         };
 
         $scope.tabs = [

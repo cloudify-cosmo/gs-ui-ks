@@ -28,10 +28,10 @@
 
 <div class="grid-container">
 
-    <!-- TODO turn into template for each component -->
+    <!-- TODO turn into template/directive for each component -->
     <!-- gauges -->
     <div class="component grid-100" ng-controller="GaugesCtrl">
-        <h3 class="heading grid-100">Health Gauge</h3>
+        <h3 class="heading grid-100">Gauge</h3>
         <hr/>
         <div class="demo grid-50">
             <div class="controls grid-100">
@@ -119,7 +119,7 @@
     <div class="component grid-100" ng-controller="TopologyCtrl">
         <h3 class="heading grid-100">Topology</h3>
         <hr/>
-        <div class="demo grid-50">
+        <div class="demo grid-70">
             <div class="controls grid-100">
 <!--
                 <label for="layout-padding">Value</label>
@@ -130,11 +130,11 @@
             <hr/>
             <div class="demo">
                 <div class="grid-container">
-                    <topology class="grid-100" data="topology.graphData"></topology>
+                    <topology class="grid-100" data="topology.data.graph"></topology>
                 </div>
             </div>
         </div>
-        <div class="description grid-50">
+        <div class="description grid-30">
         </div>
         <hr class="grid-100"/>
         <div class="source grid-100">
