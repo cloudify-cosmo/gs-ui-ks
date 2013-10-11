@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('TopologyCtrl', ['$scope', function ($scope) {
+    .controller('TopologyCtrl', ['$scope', '$filter', function ($scope, $filter) {
 
         $scope.topology = {
             data: {
@@ -92,6 +92,14 @@ angular.module('gsUiKsApp')
                 }
             }
         };
+
+        $scope.dataText = $filter('json')($scope.topology.data.tree);
+
+        $scope.applyModel = function() {
+//            console.log(angular.fromJson($scope.dataText))
+            $scope.topology.data.tree = angular.fromJson($scope.dataText);
+        }
+
 
         $scope.tabs = [
             // TODO is there a better way to get source code (perhaps $http or $resource)?

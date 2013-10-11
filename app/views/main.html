@@ -126,6 +126,8 @@
                 <input id="layout-padding" name="layout-padding" type="number" step="10" min="10" max="100"
                        ng-model="topology.layout.padding"/>
 -->
+                <textarea ui-codemirror="codemirrorOptions" ng-model="dataText"></textarea>
+                <button ng-click="applyModel()">Apply Model</button>
             </div>
             <hr/>
             <div class="demo">

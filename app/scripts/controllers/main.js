@@ -14,4 +14,5 @@ angular.module('gsUiKsApp')
             }
         };
 
+        $scope.codemirrorOptions = gsConfig.codemirror;
     }]);

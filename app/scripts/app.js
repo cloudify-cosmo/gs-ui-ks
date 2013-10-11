@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gsUiKsApp', ['ui.bootstrap','gsUiInfra'])
+angular.module('gsUiKsApp', ['ui.codemirror', 'ui.bootstrap', 'gsUiInfra'])
     .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
@@ -26,5 +26,10 @@ angular.module('gsUiKsApp', ['ui.bootstrap','gsUiInfra'])
                 html: 'html',
                 javascript: 'javascript'
             }
+        },
+        codemirror: {
+            lineWrapping: true,
+            lineNumbers: true,
+            mode: 'javascript'
         }
     });
