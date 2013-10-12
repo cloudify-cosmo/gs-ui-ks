@@ -133,7 +133,11 @@
             <div class="demo">
                 <div class="grid-container">
                     <!--<topology class="grid-100" data="topology.data.graph"></topology>-->
-                    <topology class="grid-100" data="topology.data.tree"></topology>
+                    <topology class="grid-100"
+                              data="data.graph"
+                              layouter="layouter"
+                            ></topology>
+                    <p>layouter: {{layouter | json}}</p>
                 </div>
             </div>
         </div>
