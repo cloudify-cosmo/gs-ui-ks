@@ -30,19 +30,10 @@
 
     <!-- TODO turn into template/directive for each component -->
     <!-- gauges -->
-    <div class="component grid-100" ng-controller="GaugesCtrl">
+    <div id="gauges" class="component grid-100" ng-controller="GaugesCtrl">
         <h3 class="heading grid-100">Gauge</h3>
         <hr/>
-        <div class="demo grid-50">
-            <div class="controls grid-100">
-                <label for="gauge-val">Value</label>
-                <input id="gauge-val" name="gauge-val" type="number" step="10" min="0" max="100"
-                       ng-model="gauge.val"/>
-                <label for="gauge-anim">Sensitivity</label>
-                <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="10"
-                       ng-model="gauge.sensitivity"/>
-            </div>
-            <hr/>
+        <div class="grid-50">
             <div class="demo">
                 <div class="grid-container">
 
@@ -68,6 +59,15 @@
                               colors="gauge.themes.sky"
                             ></gs-gauge>
                 </div>
+            </div>
+            <hr/>
+            <div class="controls grid-100">
+                <label for="gauge-val">Value</label>
+                <input id="gauge-val" name="gauge-val" type="number" step="10" min="0" max="100"
+                       ng-model="gauge.val"/>
+                <label for="gauge-anim">Sensitivity</label>
+                <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="10"
+                       ng-model="gauge.sensitivity"/>
             </div>
         </div>
         <div class="description grid-50">
@@ -116,32 +116,28 @@
     <!-- gauges end -->
     <hr/>
 
-    <div class="component grid-100" ng-controller="TopologyCtrl">
+    <div id="topology" class="component grid-100" ng-controller="TopologyCtrl">
         <h3 class="heading grid-100">Topology</h3>
         <hr/>
-        <div class="demo grid-70">
-            <div class="controls grid-100">
-<!--
-                <label for="layout-padding">Value</label>
-                <input id="layout-padding" name="layout-padding" type="number" step="10" min="10" max="100"
-                       ng-model="topology.layout.padding"/>
--->
-                <textarea ui-codemirror="codemirrorOptions" ng-model="dataText"></textarea>
-                <button ng-click="applyModel()">Apply Model</button>
+        <div class="grid-70">
+            <div class="demo">
+                <topology class="grid-100"
+                          data="data.graph"
+                          layouter="layouter"
+                        ></topology>
             </div>
             <hr/>
-            <div class="demo">
-                <div class="grid-container">
-                    <!--<topology class="grid-100" data="topology.data.graph"></topology>-->
-                    <topology class="grid-100"
-                              data="data.graph"
-                              layouter="layouter"
-                            ></topology>
-                    <p>layouter: {{layouter | json}}</p>
-                </div>
+            <div class="controls grid-100">
+                <!--
+                                <label for="layout-padding">Padding</label>
+                                <input id="layout-padding" name="layout-padding" type="number" step="10" min="10" max="100"
+                                       ng-model="topology.layout.padding"/>
+                -->
             </div>
         </div>
         <div class="description grid-30">
+            <textarea ui-codemirror="codemirrorOptions" ng-model="code.data"></textarea>
+            <button ng-click="applyModel()">Apply Model</button>
         </div>
         <hr class="grid-100"/>
         <div class="source grid-100">

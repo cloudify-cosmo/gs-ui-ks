@@ -28,7 +28,7 @@ angular.module('gsUiKsApp', ['ui.codemirror', 'ui.bootstrap', 'gsUiInfra'])
             }
         },
         codemirror: {
-            lineWrapping: true,
+            lineWrapping: false,
             lineNumbers: true,
             mode: 'javascript'
         }

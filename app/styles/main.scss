@@ -16,6 +16,12 @@ $codeblockBackground: #fafafa;
 /* TODO should we use compass_twitter_bootstrap_responsive ? */
 @import "compass_twitter_bootstrap";
 
+/* mixins */
+@mixin roundBorder ($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
 
 /* reset */
 p {
@@ -99,8 +105,15 @@ footer {
     input[type='number'] {
       width: 80px;
     }
+  }
+  &#topology {
+    .demo,
     .CodeMirror {
-      height: 200px;
+        height: 550px;
+    }
+    .CodeMirror {
+      @include roundBorder(4px);
+      border: 1px solid #ddd;
       background-color: #fafafa;
     }
   }

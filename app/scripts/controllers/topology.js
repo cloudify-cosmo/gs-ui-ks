@@ -91,13 +91,14 @@ angular.module('gsUiKsApp')
             }
         };
 
+        $scope.code = {
+            data: $filter('json')($scope.data.graph)
+        }
+
         $scope.layouter = Layout.Tensor;
 
-        $scope.dataText = $filter('json')($scope.data.graph);
-
         $scope.applyModel = function () {
-//            console.log(angular.fromJson($scope.dataText))
-            $scope.data.graph = angular.fromJson($scope.dataText);
+            $scope.data.graph = angular.fromJson($scope.code.data);
         }
 
 
