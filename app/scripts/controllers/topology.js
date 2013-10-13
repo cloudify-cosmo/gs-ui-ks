@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('TopologyCtrl', ['$scope', '$filter', 'Layout', function ($scope, $filter, Layout) {
+    .controller('TopologyCtrl', ['$scope', '$filter', 'Layout', 'Render', function ($scope, $filter, Layout, Render) {
 
         $scope.data = {
             graph: {
@@ -96,6 +96,7 @@ angular.module('gsUiKsApp')
         }
 
         $scope.layouter = Layout.Tensor;
+        $scope.renderer = Render.D3;
 
         $scope.applyModel = function () {
             $scope.data.graph = angular.fromJson($scope.code.data);
