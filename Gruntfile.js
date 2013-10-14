@@ -31,12 +31,16 @@ module.exports = function (grunt) {
                 tasks: ['coffee:test']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: [
+                    '<%= yeoman.app %>/styles/{,*/}*.{scss,sass}',
+                    '<%= yeoman.app %>/bower_components/gs-ui-infra/app/styles/{,*/}*.{scss,sass}'
+                ],
                 tasks: ['compass']
             },
             livereload: {
                 files: [
                     '{.tmp,<%= yeoman.app %>}/bower_components/gs-ui-infra/app/scripts/{,*/}*.js',
+                    '{.tmp,<%= yeoman.app %>}/bower_components/gs-ui-infra/app/styles/{,*/}*.css',
                     '<%= yeoman.app %>/{,*/}*.html',
                     '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
@@ -139,16 +143,31 @@ module.exports = function (grunt) {
             }
         },
         compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: '<%= yeoman.app %>/bower_components',
-                relativeAssets: true
+            ks:{
+                options: {
+                    sassDir: ['<%= yeoman.app %>/styles'],
+                    cssDir: '.tmp/styles',
+                    imagesDir: '<%= yeoman.app %>/images',
+                    javascriptsDir: '<%= yeoman.app %>/scripts',
+                    fontsDir: '<%= yeoman.app %>/styles/fonts',
+                    importPath: '<%= yeoman.app %>/bower_components',
+                    relativeAssets: true
+                },
+                dist: {}
+
             },
-            dist: {},
+            infra:{
+                options: {
+                    sassDir: ['<%= yeoman.app %>/bower_components/gs-ui-infra/app/styles'],
+                    cssDir: '.tmp/bower_components/gs-ui-infra/app/styles',
+                    imagesDir: '<%= yeoman.app %>/images',
+                    javascriptsDir: '<%= yeoman.app %>/scripts',
+                    fontsDir: '<%= yeoman.app %>/styles/fonts',
+                    importPath: '<%= yeoman.app %>/bower_components',
+                    relativeAssets: true
+                },
+                dist: {}
+            },
             server: {
                 options: {
                     debugInfo: true
@@ -196,6 +215,14 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/styles/main.css': [
                         '.tmp/styles/{,*/}*.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
+                    ]
+                }
+            },
+            infra: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '.tmp/bower_components/gs-ui-infra/app/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/bower_components/gs-ui-infra/dist/styles/{,*/}*.css'
                     ]
                 }
             }
@@ -287,6 +314,7 @@ module.exports = function (grunt) {
     grunt.registerTask('server', [
         'clean:server',
         'coffee:dist',
+        'compass',
         'compass:server',
         'livereload-start',
         'connect:livereload',
