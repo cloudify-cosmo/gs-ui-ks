@@ -8,22 +8,22 @@ angular.module('gsUiKsApp')
                 "nodes": [
                     {
                         "id": 0,
-                        "name": "vagrant_host",
+                        "name": "Vagrant Host",
                         "type": ["cloudify.tosca.types.host"]
                     },
                     {
                         "id": 1,
-                        "name": "pickle_db",
+                        "name": "Pickle DB",
                         "type": ["cloudify.tosca.types.db_server", "cloudify.tosca.types.middleware_server"]
                     },
                     {
                         "id": 2,
-                        "name": "flask",
+                        "name": "Flask",
                         "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"]
                     },
                     {
                         "id": 3,
-                        "name": "flask_app",
+                        "name": "Flask App",
                         "type": ["cloudify.tosca.types.app_module"]
 /*
                     },
@@ -142,8 +142,8 @@ angular.module('gsUiKsApp')
             $scope.data.graph = $scope.codeDataAsObject();
         };
 
-        $scope.layouter = Layout.Tensor;
-        $scope.renderer = Render.D3;
+        $scope.layouter = Layout.Topology.Tensor;
+        $scope.renderer = Render.Topology.D3;
 
 
 
