@@ -8,13 +8,14 @@
     "angular-resource": "~1.0.5",
     "angular-cookies": "~1.0.5",
     "angular-sanitize": "~1.0.5",
-    "rainbow":"1.1.9",
-      "unsemantic":"latest",
-      "angular-ui-codemirror": "0.0.5",
-      "angular-bootstrap":"0.4.0",
-	"raphael": "latest",
-     "gs-ui-infra":"git://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git"
-},
+    "rainbow": "1.1.9",
+    "unsemantic": "latest",
+    "angular-ui-codemirror": "0.0.5",
+    "angular-bootstrap": "0.4.0",
+    "raphael": "latest",
+    "gs-ui-infra": "git://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git",
+    "d3": "~3.3.8"
+  },
   "devDependencies": {
     "angular-mocks": "~1.0.5",
     "angular-scenario": "~1.0.5"
