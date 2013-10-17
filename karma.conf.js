@@ -15,6 +15,7 @@ module.exports = function(karma) {
     // list of files / patterns to load in the browser
     files: [
         'app/bower_components/angular/angular.js',
+        'app/bower_components/angular-ui-codemirror/ui-codemirror.js',
         'app/bower_components/angular-mocks/angular-mocks.js',
         'app/bower_components/angular-bootstrap/ui-bootstrap.js',
         'app/bower_components/gs-ui-infra/app/scripts/app.js',

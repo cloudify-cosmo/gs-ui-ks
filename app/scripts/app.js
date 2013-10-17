@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp', ['ui.codemirror', 'ui.bootstrap', 'gsUiInfra'])
-    .config(function ($routeProvider, $locationProvider) {
+    .config(function ($routeProvider/*, $locationProvider*/) {
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
