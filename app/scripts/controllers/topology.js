@@ -5,93 +5,93 @@ angular.module('gsUiKsApp')
 
         $scope.data = {
             graph: {
-                "nodes": [
+                'nodes': [
                     {
-                        "id": 0,
-                        "name": "Tier A",
-                        "type": ["cloudify.tosca.types.tier"]
+                        'id': 0,
+                        'name': 'Tier A',
+                        'type': ['cloudify.tosca.types.tier']
                     },
                     {
-                        "id": 1,
-                        "name": "Vagrant Host",
-                        "type": ["cloudify.tosca.types.host"]
+                        'id': 1,
+                        'name': 'Vagrant Host',
+                        'type': ['cloudify.tosca.types.host']
                     },
                     {
-                        "id": 2,
-                        "name": "Pickle DB",
-                        "type": ["cloudify.tosca.types.db_server", "cloudify.tosca.types.middleware_server"]
+                        'id': 2,
+                        'name': 'Pickle DB',
+                        'type': ['cloudify.tosca.types.db_server', 'cloudify.tosca.types.middleware_server']
                     },
                     {
-                        "id": 3,
-                        "name": "Flask",
-                        "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"]
+                        'id': 3,
+                        'name': 'Flask',
+                        'type': ['cloudify.tosca.types.web_server', 'cloudify.tosca.types.middleware_server']
 /*
                     },
                     {
-                        "id": 3,
-                        "name": "Flask App",
-                        "type": ["cloudify.tosca.types.app_module"]
+                        'id': 3,
+                        'name': 'Flask App',
+                        'type': ['cloudify.tosca.types.app_module']
 */
 /*
                     },
                     {
-                        "id": 5,
-                        "name": "network_b",
-                        "type": ["cloudify.tosca.types.network"]
+                        'id': 5,
+                        'name': 'network_b',
+                        'type': ['cloudify.tosca.types.network']
                     },
                     {
-                        "id": 6,
-                        "name": "tier",
-                        "type": ["cloudify.tosca.types.tier"]
+                        'id': 6,
+                        'name': 'tier',
+                        'type': ['cloudify.tosca.types.tier']
 */
                     }
                 ],
-                "edges": [
+                'edges': [
                     {
-                        "type": "contained_in",
-                        "source": 1,
-                        "target": 0
+                        'type': 'contained_in',
+                        'source': 1,
+                        'target': 0
                     },
                     {
-                        "type": "contained_in",
-                        "source": 2,
-                        "target": 1
+                        'type': 'contained_in',
+                        'source': 2,
+                        'target': 1
                     },
                     {
-                        "type": "contained_in",
-                        "source": 3,
-                        "target": 1
+                        'type': 'contained_in',
+                        'source': 3,
+                        'target': 1
                     },
                     {
-                        "type": "connected_to",
-                        "source": 1,
-                        "target": 2
+                        'type': 'connected_to',
+                        'source': 1,
+                        'target': 2
                     }
                 ]
             },
             tree: {
-                "id": "root",
-                "children": [
+                'id': 'root',
+                'children': [
                     {
-                        "id": 0,
-                        "type": ["cloudify.tosca.types.network"],
-                        "dependencies": [3],
-                        "children": [
+                        'id': 0,
+                        'type': ['cloudify.tosca.types.network'],
+                        'dependencies': [3],
+                        'children': [
                             {
-                                "id": 2,
-                                "type": ["cloudify.tosca.types.tier"],
-                                "children": [
+                                'id': 2,
+                                'type': ['cloudify.tosca.types.tier'],
+                                'children': [
                                     {
-                                        "id": 3,
-                                        "type": ["cloudify.tosca.types.host"],
-                                        "children": [
+                                        'id': 3,
+                                        'type': ['cloudify.tosca.types.host'],
+                                        'children': [
                                             {
-                                                "id": 4,
-                                                "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"],
-                                                "children": [
+                                                'id': 4,
+                                                'type': ['cloudify.tosca.types.web_server', 'cloudify.tosca.types.middleware_server'],
+                                                'children': [
                                                     {
-                                                        "id": 5,
-                                                        "type": ["cloudify.tosca.types.app_module"]
+                                                        'id': 5,
+                                                        'type': ['cloudify.tosca.types.app_module']
                                                     }
                                                 ]
                                             }
@@ -100,9 +100,9 @@ angular.module('gsUiKsApp')
                                 ]
                             },
                             {
-                                "id": 1,
-                                "type": ["cloudify.tosca.types.tier"],
-                                "dependencies": [4, 5]
+                                'id': 1,
+                                'type': ['cloudify.tosca.types.tier'],
+                                'dependencies': [4, 5]
                             }
                         ]
                     }
