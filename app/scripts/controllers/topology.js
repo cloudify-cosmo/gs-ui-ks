@@ -1,81 +1,128 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('TopologyCtrl', ['$scope', '$filter', 'Layout', 'Render', function ($scope, $filter, Layout, Render) {
+    .controller('TopologyCtrl', ['$scope', '$filter', 'Layout', 'Render', 'gs.config', function ($scope, $filter, Layout, Render, gsConfig) {
 
         $scope.data = {
             graph: {
+                /*
+                "nodes": [{
+            "id": 1,
+            "name": "vagrant_host",
+            "type": ["cloudify.tosca.types.host"]
+        }, {
+            "id": 2,
+            "name": "pickle_db",
+            "type": ["cloudify.tosca.types.db_server", "cloudify.tosca.types.middleware_server"]
+        }, {
+            "id": 3,
+            "name": "flask",
+            "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"]
+        }, {
+            "id": 4,
+            "name": "flask_app",
+            "type": ["cloudify.tosca.types.app_module"]
+        }],
+            "edges": [{
+            "type": "contained_in",
+            "source": 2,
+            "target": 1
+        }, {
+            "type": "contained_in",
+            "source": 3,
+            "target": 1
+        }, {
+            "type": "contained_in",
+            "source": 4,
+            "target": 3
+        }, {
+            "type": "connected_to",
+            "source": 4,
+            "target": 2
+        }]
+                */
                 "nodes": [
                     {
-                        "id": 0,
-                        "name": "Vagrant Host",
+                        "id": 9,
+                        "name": "Network",
+                        "type": ["cloudify.tosca.types.network"]
+                    },
+                    {
+                        "id": 10,
+                        "name": "Tier",
+                        "type": ["cloudify.tosca.types.tier"]
+                    },
+                    {
+                        "id": 11,
+                        "name": "Host A",
                         "type": ["cloudify.tosca.types.host"]
                     },
                     {
-                        "id": 1,
-                        "name": "Pickle DB",
+                        "id": 12,
+                        "name": "Host B",
+                        "type": ["cloudify.tosca.types.host"]
+                    },
+                    {
+                        "id": 13,
+                        "name": "Host C",
+                        "type": ["cloudify.tosca.types.host"]
+                    },
+                    {
+                        "id": 14,
+                        "name": "Pickle",
                         "type": ["cloudify.tosca.types.db_server", "cloudify.tosca.types.middleware_server"]
                     },
                     {
-                        "id": 2,
+                        "id": 15,
                         "name": "Flask",
                         "type": ["cloudify.tosca.types.web_server", "cloudify.tosca.types.middleware_server"]
                     },
                     {
-                        "id": 3,
-                        "name": "Flask App",
+                        "id": 16,
+                        "name": "App",
                         "type": ["cloudify.tosca.types.app_module"]
-/*
-                    },
-                    {
-                        "id": 4,
-                        "name": "network_a",
-                        "type": ["cloudify.tosca.types.network"]
-                    },
-                    {
-                        "id": 5,
-                        "name": "network_b",
-                        "type": ["cloudify.tosca.types.network"]
-                    },
-                    {
-                        "id": 6,
-                        "name": "tier",
-                        "type": ["cloudify.tosca.types.tier"]
-*/
                     }
                 ],
                 "edges": [
                     {
                         "type": "contained_in",
-                        "source": 1,
-                        "target": 0
+                        "source": 10,
+                        "target": 9
                     },
                     {
                         "type": "contained_in",
-                        "source": 2,
-                        "target": 0
+                        "source": 11,
+                        "target": 10
                     },
                     {
                         "type": "contained_in",
-                        "source": 3,
-                        "target": 2
-/*
+                        "source": 12,
+                        "target": 10
                     },
                     {
                         "type": "contained_in",
-                        "source": 0,
-                        "target": 6
+                        "source": 13,
+                        "target": 10
                     },
                     {
                         "type": "contained_in",
-                        "source": 6,
-                        "target": 4
-*/
+                        "source": 14,
+                        "target": 12
+                    },
+                    {
+                        "type": "contained_in",
+                        "source": 15,
+                        "target": 12
+                    },
+                    {
+                        "type": "contained_in",
+                        "source": 16,
+                        "target": 15
                     },
                     {
                         "type": "connected_to",
-                        "source": 3,
-                        "target": 1
+                        "source": 11,
+                        "target": 12
                     }
                 ]
             },
@@ -142,7 +189,7 @@ angular.module('gsUiKsApp')
             $scope.data.graph = $scope.codeDataAsObject();
         };
 
-        $scope.layouter = Layout.Topology.Tensor;
+        $scope.layouter = Layout.Topology.Tensor.init(gsConfig.topologyLayout);
         $scope.renderer = Render.Topology.D3;
 
 

@@ -31,5 +31,8 @@ angular.module('gsUiKsApp', ['ui.codemirror', 'ui.bootstrap', 'gsUiInfra'])
             lineWrapping: false,
             lineNumbers: true,
             mode: 'javascript'
+        },
+        topologyLayout: {
+            xyPositioning: 'relative'
         }
     });
