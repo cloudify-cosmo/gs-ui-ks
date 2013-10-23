@@ -128,7 +128,7 @@ angular.module('gsUiKsApp')
 */
                     {
                         'type': 'connected_to',
-                        'source': 12,
+                        'source': 11,
                         'target': 9
                     }
                 ]
