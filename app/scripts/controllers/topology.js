@@ -4,96 +4,96 @@ angular.module('gsUiKsApp')
     .controller('TopologyCtrl', ['$scope', '$filter', 'Layout', 'Render', 'gs.config', function ($scope, $filter, Layout, Render, gsConfig) {
 
         $scope.data = {
-            graph:
+            graph: /*
+             {
+             'nodes': [
+             {
+             'id': 9,
+             'name': 'Network',
+             'type': ['cloudify.types.network']
+             },
+             {
+             'id': 10,
+             'name': 'Tier',
+             'type': ['cloudify.types.tier']
+             },
+             {
+             'id': 11,
+             'name': 'Host A',
+             'type': ['cloudify.types.host']
+             },
+             {
+             'id': 12,
+             'name': 'Host B',
+             'type': ['cloudify.types.host']
+             },
+             {
+             'id': 13,
+             'name': 'Host C',
+             'type': ['cloudify.types.host']
+             },
+             {
+             'id': 14,
+             'name': 'Pickle',
+             'type': ['cloudify.types.db_server', 'cloudify.types.middleware_server']
+             },
+             {
+             'id': 15,
+             'name': 'Flask',
+             'type': ['cloudify.types.web_server', 'cloudify.types.middleware_server']
+             },
+             {
+             'id': 16,
+             'name': 'App',
+             'type': ['cloudify.types.app_module']
+             }
+             ],
+             'edges': [
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 10,
+             'target': 9
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 11,
+             'target': 10
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 12,
+             'target': 10
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 13,
+             'target': 10
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 14,
+             'target': 12
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 15,
+             'target': 12
+             },
+             {
+             'type': 'cloudify.relationships.contained_in',
+             'source': 16,
+             'target': 15
+             },
+             {
+             'type': 'cloudify.relationships.connected_to',
+             'source': 13,
+             'target': 9
+             }
+             ]
+             }
+             */
 
             {
-                'nodes': [
-                    {
-                        'id': 9,
-                        'name': 'Network',
-                        'type': ['cloudify.types.network']
-                    },
-                    {
-                        'id': 10,
-                        'name': 'Tier',
-                        'type': ['cloudify.types.tier']
-                    },
-                    {
-                        'id': 11,
-                        'name': 'Host A',
-                        'type': ['cloudify.types.host']
-                    },
-                    {
-                        'id': 12,
-                        'name': 'Host B',
-                        'type': ['cloudify.types.host']
-                    },
-                    {
-                        'id': 13,
-                        'name': 'Host C',
-                        'type': ['cloudify.types.host']
-                    },
-                    {
-                        'id': 14,
-                        'name': 'Pickle',
-                        'type': ['cloudify.types.db_server', 'cloudify.types.middleware_server']
-                    },
-                    {
-                        'id': 15,
-                        'name': 'Flask',
-                        'type': ['cloudify.types.web_server', 'cloudify.types.middleware_server']
-                    },
-                    {
-                        'id': 16,
-                        'name': 'App',
-                        'type': ['cloudify.types.app_module']
-                    }
-                ],
-                'edges': [
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 10,
-                        'target': 9
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 11,
-                        'target': 10
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 12,
-                        'target': 10
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 13,
-                        'target': 10
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 14,
-                        'target': 12
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 15,
-                        'target': 12
-                    },
-                    {
-                        'type': 'cloudify.relationships.contained_in',
-                        'source': 16,
-                        'target': 15
-                    },
-                    {
-                        'type': 'cloudify.relationships.connected_to',
-                        'source': 13,
-                        'target': 9
-                    }
-                ]
-            }
-
-/*            {
                 "nodes": [
                     {
                         "id": 1,
@@ -182,11 +182,13 @@ angular.module('gsUiKsApp')
                         "source": 7,
                         "target": 4,
                         "type": "cloudify.relationships.contained_in"
-                    },
-                    {
-                        "source": 7,
-                        "target": 3,
-                        "type": "cloudify.relationships.depends_on"
+                        /*
+                         },
+                         {
+                         "source": 7,
+                         "target": 3,
+                         "type": "cloudify.relationships.depends_on"
+                         */
                     },
                     {
                         "source": 7,
@@ -194,9 +196,7 @@ angular.module('gsUiKsApp')
                         "type": "cloudify.relationships.connected_to"
                     }
                 ]
-            }*/,
-
-            tree: {
+            }, tree: {
                 'id': 'root',
                 'children': [
                     {
@@ -237,7 +237,7 @@ angular.module('gsUiKsApp')
             }
         };
 
-        $scope.currData = function() {
+        $scope.currData = function () {
             return $filter('json')($scope.data.graph);
         };
 
@@ -246,7 +246,7 @@ angular.module('gsUiKsApp')
             initial: $scope.currData()
         };
 
-        $scope.codeDataAsObject = function() {
+        $scope.codeDataAsObject = function () {
             return angular.fromJson($scope.code.data);
         };
 
@@ -261,20 +261,10 @@ angular.module('gsUiKsApp')
 
         $scope.layouter = Layout.Topology.Tensor.init(gsConfig.topologyLayout);
         $scope.renderer = Render.Topology.D3;
-
-
-
-        // TODO why not working?
-        $scope.tabs = [
-            // TODO is there a better way to get source code (perhaps $http or $resource)?
-            {
-                title: $scope.tabsMeta.html.title,
-                content: '<topology data="data.graph" layouter="layouter"></topology>'
-            },
-            {
-                title: $scope.tabsMeta.javascript.title,
-                content: '$scope.data = ' + JSON.stringify($scope.data.graph, null, 2)
+        $scope.events = {
+            'click': function (v) {
+                console.log('node clicked: ', v)
             }
-        ];
+        };
 
     }]);

@@ -124,6 +124,7 @@
                           data="data.graph"
                           layouter="layouter"
                           renderer="renderer"
+                          events="events"
                         ></topology>
             </div>
             <hr/>
@@ -140,15 +141,6 @@
             <textarea ui-codemirror="codemirrorOptions" ng-model="code.data"></textarea>
             <button class="btn pull-right" ng-click="apply()">Apply</button>
             <button class="btn pull-right" ng-click="reset()">Reset</button>
-        </div>
-        <hr class="grid-100"/>
-        <div class="source grid-100">
-            <tabset>
-                <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                    <!-- TODO correct language attribute not being injected into directive -->
-                    <codeblock language="tab.language" source="tab.content"></codeblock>
-                </tab>
-            </tabset>
         </div>
     </div>
     <!-- topology end -->
