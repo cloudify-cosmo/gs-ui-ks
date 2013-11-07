@@ -118,7 +118,7 @@
     <div id="topology" class="component grid-100" ng-controller="TopologyCtrl">
         <h3 class="heading grid-100">Topology</h3>
         <hr/>
-        <div class="grid-70">
+<!--        <div class="grid-70">-->
             <div class="demo">
                 <topology class="grid-100"
                           data="data.graph"
@@ -129,19 +129,25 @@
             </div>
             <hr/>
             <div class="controls grid-100">
+                <h4>Model</h4>
+                <textarea ui-codemirror="codemirrorOptions" ng-model="code.data"></textarea>
+                <button class="btn pull-right" ng-click="apply()">Apply</button>
+                <button class="btn pull-right" ng-click="reset()">Reset</button>
                 <!--
                                 <label for="layout-padding">Padding</label>
                                 <input id="layout-padding" name="layout-padding" type="number" step="10" min="10" max="100"
                                        ng-model="topology.layout.padding"/>
                 -->
             </div>
-        </div>
+<!--        </div>-->
+<!--
         <div class="description grid-30">
             <h4>Model</h4>
             <textarea ui-codemirror="codemirrorOptions" ng-model="code.data"></textarea>
             <button class="btn pull-right" ng-click="apply()">Apply</button>
             <button class="btn pull-right" ng-click="reset()">Reset</button>
         </div>
+-->
     </div>
     <!-- topology end -->
 

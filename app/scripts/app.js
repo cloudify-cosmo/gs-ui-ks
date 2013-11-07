@@ -33,6 +33,9 @@ angular.module('gsUiKsApp', ['ui.codemirror', 'ui.bootstrap', 'gsUiInfra'])
             mode: 'javascript'
         },
         topologyLayout: {
-            xyPositioning: 'relative'
+            flowBounds: 2   // describes how many nodes should be laid out
+                            // horizontally before flowing them to the next row.
+                            // can be a number, or an array correlating to the
+                            // Z index of each level  in ascending order.
         }
     });
