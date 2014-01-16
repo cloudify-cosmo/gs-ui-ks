@@ -17,6 +17,8 @@ $codeblockBackground: #fafafa;
 /* TODO should we use compass_twitter_bootstrap_responsive ? */
 @import "compass_twitter_bootstrap";
 @import "../bower_components/gs-ui-infra/app/styles/main";
+@import "../bower_components/unsemantic/assets/sass/unsemantic-grid-base";
+@import "../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive";
 /* mixins */
 @mixin roundBorder ($radius) {
   -webkit-border-radius: $radius;

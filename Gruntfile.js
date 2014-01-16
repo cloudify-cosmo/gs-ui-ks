@@ -300,7 +300,6 @@ module.exports = function (grunt) {
                         src: [
                             '*.{ico,txt}',
                             '.htaccess',
-                            'bower_components/**/*',
                             'images/{,*/}*.{gif,webp}',
                             'styles/fonts/*'
                         ]
@@ -349,7 +348,7 @@ module.exports = function (grunt) {
         'copy',
 //    'cdnify', //-- guy - we do not want google CDN resources.
         'ngmin',
-        'uglify',
+//        'uglify', // no need
         'rev',
         'usemin'
     ]);

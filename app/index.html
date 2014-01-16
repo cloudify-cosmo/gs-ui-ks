@@ -14,21 +14,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!--[if (gt IE 8) | (IEMobile)]><!-->
-        <link rel="stylesheet" href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-responsive.css" />
-        <!--<![endif]-->
-        <!--[if (lt IE 9) & (!IEMobile)]>
-        <link rel="stylesheet" href="bower_components/unsemantic/assets/stylesheets/ie.css" />
-        <![endif]-->
+
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+
+
+
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="bower_components/rainbow/themes/github.css" />
+        <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css"/>
+
 
         <!-- endbuild -->
 
-        <link rel="stylesheet" href="bower_components/rainbow/themes/github.css" />
-        <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
 
     </head>
     <body ng-app="gsUiKsApp">
@@ -46,7 +45,10 @@
         <!-- Add your site or application content here -->
         <div ng-view></div>
 
-        <!-- add required bower components here -->
+
+
+
+        <!-- build:js scripts/scripts.js -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -62,8 +64,6 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
         <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
-
-        <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/app.js"></script>
