@@ -94,109 +94,110 @@ angular.module('gsUiKsApp')
              */
 
             {
-                "nodes": [
+                'nodes': [
                     {
-                        "id": 1,
-                        "name": "webserver_host",
-                        "type": [
-                            "mezzanine_host",
-                            "cloudify.types.host"
+                        'id': 1,
+                        'name': 'webserver_host',
+                        'type': [
+                            'mezzanine_host',
+                            'cloudify.types.host'
                         ]
                     },
                     {
-                        "id": 2,
-                        "name": "postgres_host",
-                        "type": [
-                            "mezzanine_host",
-                            "cloudify.types.host"
+                        'id': 2,
+                        'name': 'postgres_host',
+                        'type': [
+                            'mezzanine_host',
+                            'cloudify.types.host'
                         ]
                     },
                     {
-                        "id": 3,
-                        "name": "nginx",
-                        "type": [
-                            "mezzanine_middleware",
-                            "cloudify.types.middleware_server"
+                        'id': 3,
+                        'name': 'nginx',
+                        'type': [
+                            'mezzanine_middleware',
+                            'cloudify.types.middleware_server'
                         ]
                     },
                     {
-                        "id": 4,
-                        "name": "unicorn",
-                        "type": [
-                            "mezzanine_middleware",
-                            "cloudify.types.middleware_server"
+                        'id': 4,
+                        'name': 'unicorn',
+                        'type': [
+                            'mezzanine_middleware',
+                            'cloudify.types.middleware_server'
                         ]
                     },
                     {
-                        "id": 5,
-                        "name": "postgres_server",
-                        "type": [
-                            "mezzanine_middleware",
-                            "cloudify.types.middleware_server"
+                        'id': 5,
+                        'name': 'postgres_server',
+                        'type': [
+                            'mezzanine_middleware',
+                            'cloudify.types.middleware_server'
                         ]
                     },
                     {
-                        "id": 6,
-                        "name": "postgres_server_db",
-                        "type": [
-                            "mezzanine_app_module",
-                            "cloudify.types.app_module"
+                        'id': 6,
+                        'name': 'postgres_server_db',
+                        'type': [
+                            'mezzanine_app_module',
+                            'cloudify.types.app_module'
                         ]
                     },
                     {
-                        "id": 7,
-                        "name": "mezanine_app",
-                        "type": [
-                            "mezzanine_app_module",
-                            "cloudify.types.app_module"
+                        'id': 7,
+                        'name': 'mezanine_app',
+                        'type': [
+                            'mezzanine_app_module',
+                            'cloudify.types.app_module'
                         ]
                     }
                 ],
-                "edges": [
+                'edges': [
                     {
-                        "source": 3,
-                        "target": 4,
-                        "type": "cloudify.relationships.connected_to"
+                        'source': 3,
+                        'target': 4,
+                        'type': 'cloudify.relationships.connected_to'
                     },
                     {
-                        "source": 3,
-                        "target": 1,
-                        "type": "cloudify.relationships.contained_in"
+                        'source': 3,
+                        'target': 1,
+                        'type': 'cloudify.relationships.contained_in'
                     },
                     {
-                        "source": 4,
-                        "target": 1,
-                        "type": "cloudify.relationships.contained_in"
+                        'source': 4,
+                        'target': 1,
+                        'type': 'cloudify.relationships.contained_in'
                     },
                     {
-                        "source": 5,
-                        "target": 2,
-                        "type": "cloudify.relationships.contained_in"
+                        'source': 5,
+                        'target': 2,
+                        'type': 'cloudify.relationships.contained_in'
                     },
                     {
-                        "source": 6,
-                        "target": 5,
-                        "type": "cloudify.relationships.contained_in"
+                        'source': 6,
+                        'target': 5,
+                        'type': 'cloudify.relationships.contained_in'
                     },
                     {
-                        "source": 7,
-                        "target": 4,
-                        "type": "cloudify.relationships.contained_in"
+                        'source': 7,
+                        'target': 4,
+                        'type': 'cloudify.relationships.contained_in'
                         /*
                          },
                          {
-                         "source": 7,
-                         "target": 3,
-                         "type": "cloudify.relationships.depends_on"
+                         'source': 7,
+                         'target': 3,
+                         'type': 'cloudify.relationships.depends_on'
                          */
                     },
                     {
-                        "source": 7,
-                        "target": 6,
-                        "type": "cloudify.relationships.connected_to"
+                        'source': 7,
+                        'target': 6,
+                        'type': 'cloudify.relationships.connected_to'
                     }
                 ]
-            }, tree: {
+            },
+            tree: {
                 'id': 'root',
                 'children': [
                     {
@@ -261,10 +262,6 @@ angular.module('gsUiKsApp')
 
         $scope.layouter = Layout.Topology.Tensor.init(gsConfig.topologyLayout);
         $scope.renderer = Render.Topology.D3;
-        $scope.events = {
-            'click': function (v) {
-                console.log('node clicked: ', v)
-            }
-        };
+
 
     }]);
