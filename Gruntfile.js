@@ -110,12 +110,12 @@ module.exports = function (grunt) {
             unit: {
                 configFile: 'karma.conf.js',
                 singleRun: true,
-                autoWatch:false,
+                autoWatch: false,
                 browsers: ['Chrome']
             },
-            watch:{
-                configFile:'karma.conf.js',
-                singleRun:false
+            watch: {
+                configFile: 'karma.conf.js',
+                singleRun: false
             }
         },
         coffee: {
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
             }
         },
         compass: {
-            ks:{
+            ks: {
                 options: {
                     sassDir: ['<%= yeoman.app %>/styles'],
                     cssDir: '.tmp/styles',
@@ -156,7 +156,7 @@ module.exports = function (grunt) {
                 dist: {}
 
             },
-            infra:{
+            infra: {
                 options: {
                     sassDir: ['<%= yeoman.app %>/bower_components/gs-ui-infra/app/styles'],
                     cssDir: '.tmp/bower_components/gs-ui-infra/app/styles',
@@ -168,7 +168,7 @@ module.exports = function (grunt) {
                 },
                 dist: {}
             },
-            dist:{},
+            dist: {},
             server: {
                 options: {
                     debugInfo: true
@@ -302,6 +302,14 @@ module.exports = function (grunt) {
                             '.htaccess',
                             'images/{,*/}*.{gif,webp}',
                             'styles/fonts/*'
+                        ]
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        dest: '<%= yeoman.dist %>',
+                        src: [
+                            'package.json'
                         ]
                     }
                 ]
