@@ -1,0 +1,86 @@
+<!-- TODO turn into template/directive for each component -->
+<!-- gauges -->
+<div id="gauges" class="component grid-100" ng-controller="GaugesCtrl">
+    <h3 class="heading grid-100">Gauge</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+
+                <gs-gauge class="grid-100"
+                          sensitivity="gauge.sensitivity"
+                          val="gauge.val"
+                        ></gs-gauge>
+            </div>
+            <div class="grid-container">
+                <gs-gauge class="grid-33"
+                          sensitivity="gauge.sensitivity"
+                          val="gauge.val"
+                          colors="gauge.themes.fire"
+                        ></gs-gauge>
+                <gs-gauge class="grid-33"
+                          sensitivity="gauge.sensitivity"
+                          val="gauge.val"
+                          colors="gauge.themes.grayscale"
+                        ></gs-gauge>
+                <gs-gauge class="grid-33"
+                          sensitivity="gauge.sensitivity"
+                          val="gauge.val"
+                          colors="gauge.themes.sky"
+                        ></gs-gauge>
+            </div>
+        </div>
+        <hr/>
+        <div class="controls grid-100">
+            <label for="gauge-val">Value</label>
+            <input id="gauge-val" name="gauge-val" type="number" step="10" min="0" max="100"
+                   ng-model="gauge.val"/>
+            <label for="gauge-anim">Sensitivity</label>
+            <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="10"
+                   ng-model="gauge.sensitivity"/>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <h4>Options</h4>
+        <dl>
+            <dt><code>sensitivity</code> number</dt>
+            <dd>
+                Controls the pointer animation speed, expressed in values in the range of 0 to 10.
+                The higher the sensitivity, the higher the speed.
+            </dd>
+            <dt><code>val</code> number</dt>
+            <dd>
+                Sets the value for the gauge, in the range of 0 to 100.
+            </dd>
+            <dt><code>colors</code> object</dt>
+            <dd>
+                Configures the color theme by providing an object with the following properties,
+                as CSS color values:
+                <dl>
+                    <dt><code>border</code> string</dt>
+                    <dd>The border color.</dd>
+                    <dt><code>tick</code> string</dt>
+                    <dd>The tick color.</dd>
+                    <dt><code>background</code> array(2)</dt>
+                    <dd>The background gradient colors, bottom-up.</dd>
+                    <dt><code>basis</code> array(2)</dt>
+                    <dd>The basis gradient colors, bottom-up.</dd>
+                    <dt><code>pointer</code> array(3)</dt>
+                    <dd>The pointer colors, in the following order: border, left-gradient, right-gradient.</dd>
+                    <dt><code>dial</code> array(5)</dt>
+                    <dd>The dial gradient colors, left to right.</dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <!-- TODO correct language attribute not being injected into directive -->
+                <div codeblock language="tab.language" source="tab.content"></div codeblock>
+            </tab>
+        </tabset>
+    </div>
+</div>
+<!-- gauges end -->

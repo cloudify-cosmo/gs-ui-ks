@@ -1,0 +1,41 @@
+<div id="gauges" class="component grid-100" ng-controller="GsPieChartCtrl">
+    <h3 class="heading grid-100">gs-pie-chart</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div gs-pie-chart ng-model="chartData"></div>
+        </div>
+        <hr/>
+        <div class="controls grid-100">
+            <label>Data</label>
+            <button ng-click="changeData()">Change Data</button>
+
+            <label>Count</label>
+            <input type="number" step="1" min="5" max="30"
+                   ng-model="count"/>
+
+        </div>
+
+
+    </div>
+    <div class="description grid-50">
+        <h4>Options</h4>
+        <dl>
+            <dt><code>ng-model</code> number[]</dt>
+            <dd>
+                The data for the pie chart in a list of numbers
+            </dd>
+
+
+        </dl>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <!-- TODO correct language attribute not being injected into directive -->
+                <div codeblock language="tab.language" source="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>
