@@ -24,13 +24,13 @@
       "grunt-bower-requirejs": "*",
       "grunt-usemin": "*",
       "grunt-regarde": "*",
-      "grunt-rev": "~0.1.0",
-      "grunt-karma": "~0.5.0",
-      "karma-mocha":"~0.0.1",
-      "grunt-open": "~0.2.0",
-      "matchdep": "~0.1.2",
-      "grunt-google-cdn": "~0.1.2",
-      "grunt-ngmin": "~0.0.2"
+      "grunt-rev": "*",
+      "grunt-karma": "*",
+      "karma-mocha":"*",
+      "grunt-open": "*",
+      "matchdep": "*",
+      "grunt-google-cdn": "*",
+      "grunt-ngmin": "*"
   },
   "engines": {
     "node": ">=0.8.0"
