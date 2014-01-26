@@ -29,7 +29,7 @@
                     </li>
                 </ul>
                 The translation files format is as follows:
-                <div codeblock source="translation.code" language="translation.language"></div>
+                <div codeblock source="translationFile.code" language="translationFile.language"></div>
                 where keys are used as placeholders in the views and templates, and values are the translated
                 permutations for each locale.
             </li>
@@ -41,7 +41,6 @@
     <div class="source grid-100">
         <tabset>
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                <!-- TODO correct language attribute not being injected into directive -->
                 <div codeblock language="tab.language" source="tab.content"></div>
             </tab>
         </tabset>

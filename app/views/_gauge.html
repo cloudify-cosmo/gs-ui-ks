@@ -1,5 +1,4 @@
 <!-- TODO turn into template/directive for each component -->
-<!-- gauges -->
 <div id="gauges" class="component grid-100" ng-controller="GaugesCtrl">
     <h3 class="heading grid-100">Gauge</h3>
     <hr/>
@@ -77,10 +76,8 @@
     <div class="source grid-100">
         <tabset>
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                <!-- TODO correct language attribute not being injected into directive -->
                 <div codeblock language="tab.language" source="tab.content"></div>
             </tab>
         </tabset>
     </div>
 </div>
-<!-- gauges end -->

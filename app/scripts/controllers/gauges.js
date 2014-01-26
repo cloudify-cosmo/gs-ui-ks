@@ -44,12 +44,12 @@ angular.module('gsUiKsApp')
 
         $scope.tabs = [
             {
-                title: $scope.tabsMeta.html.title,
+                title: $scope.tabsMeta.view.title,
                 content: '<gs-gauge sensitivity="gauge.sensitivity" val="gauge.val" colors="gauge.themes.sky"></gs-gauge>',
                 language: gsConfig.codeblock.language.html
             },
             {
-                title: $scope.tabsMeta.javascript.title,
+                title: $scope.tabsMeta.controller.title,
                 content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2),
                 language: gsConfig.codeblock.language.javascript
             }
