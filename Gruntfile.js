@@ -175,27 +175,20 @@ module.exports = function (grunt) {
                 }
             }
         },
-//        concat: {
-//            dist: {
-//                files: {
-//                    '<%= yeoman.dist %>/scripts/scripts.js': [
-//                        '.tmp/concat/scripts/{,*/}*.js'
-//                    ]
-//                }
-//            }
-//        },
+        concat: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/scripts.js': [
+                        '.tmp/scripts/{,*/}*.js',
+                        '<%= yeoman.app %>/scripts/{,*/}*.js'
+                    ]
+                }
+            }
+        },
         useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
             options: {
-                dest: '<%= yeoman.dist %>',
-                flow: {
-                    html: {
-                        steps: {'js': ['concat']},
-                        post: {}
-                    }
-                }
-
-
+                dest: '<%= yeoman.dist %>'
             }
         },
         usemin: {
@@ -275,15 +268,15 @@ module.exports = function (grunt) {
                 ]
             }
         },
-//        uglify: {
-//            dist: {
-//                files: {
-//                    '<%= yeoman.dist %>/scripts/scripts.js': [
-//                        '<%= yeoman.dist %>/scripts/scripts.js'
-//                    ]
-//                }
-//            }
-//        },
+        uglify: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/scripts/scripts.js': [
+                        '<%= yeoman.dist %>/scripts/scripts.js'
+                    ]
+                }
+            }
+        },
         rev: {
             dist: {
                 files: {
