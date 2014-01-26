@@ -19,6 +19,10 @@ $codeblockBackground: #fafafa;
 @import "../bower_components/gs-ui-infra/app/styles/main";
 @import "../bower_components/unsemantic/assets/sass/unsemantic-grid-base";
 @import "../bower_components/unsemantic/assets/sass/unsemantic-grid-responsive";
+
+/* Includes */
+@import './blueprintArrows';
+
 /* mixins */
 @mixin roundBorder ($radius) {
   -webkit-border-radius: $radius;
