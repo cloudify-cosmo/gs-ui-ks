@@ -24,19 +24,21 @@
         <h3>Dependencies</h3>
 
         <p>
-            This library depends heavily on <span ng-repeat="i in ['AngularJS', 'D3']"><label>{{i}}</label></span>.
+            This library depends on <span ng-repeat="d in dependencies"><span ng-show="$middle">, </span><span ng-show="$last"> and </span><a href="{{d.link}}">{{ d.name }}</a></span>.
         </p>
     </div>
 </div>
 
 <div class="grid-container">
-
+    <h2>Directives</h2>
     <div ng-include="'views/_gauge.html'" ></div>
     <!--<div ng-include="'views/_blueprint.html'" ></div>-->
     <div ng-include="'views/_gsPieChart.html'"></div>
+</div>
 
-    <!-- topology end -->
-
+<div class="grid-container">
+    <h2>Filters</h2>
+    <div ng-include="'views/_i18n.html'"></div>
 </div>
 
 <footer>

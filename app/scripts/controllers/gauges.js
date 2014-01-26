@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('GaugesCtrl', ['$scope', function ($scope) {
+    .controller('GaugesCtrl', ['$scope', 'gs.config', function ($scope, gsConfig) {
 
         $scope.gauge = {
             sensitivity: 8,
@@ -43,14 +43,15 @@ angular.module('gsUiKsApp')
         };
 
         $scope.tabs = [
-            // TODO is there a better way to get source code (perhaps $http or $resource)?
             {
                 title: $scope.tabsMeta.html.title,
-                content: '<gs-gauge sensitivity="gauge.sensitivity" val="gauge.val" colors="gauge.themes.sky"></gs-gauge>'
+                content: '<gs-gauge sensitivity="gauge.sensitivity" val="gauge.val" colors="gauge.themes.sky"></gs-gauge>',
+                language: gsConfig.codeblock.language.html
             },
             {
                 title: $scope.tabsMeta.javascript.title,
-                content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2)
+                content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2),
+                language: gsConfig.codeblock.language.javascript
             }
         ];
     }]);

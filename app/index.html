@@ -45,16 +45,14 @@
         <!-- Add your site or application content here -->
         <div ng-view></div>
 
-
-
-
-        <!-- build:js scripts/scripts.js -->
+        <!-- build:js scripts/plugins.js -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/raphael/raphael-min.js"></script>
         <script src="bower_components/d3/d3.min.js"></script>
+        <script src="bower_components/i18next/release/i18next-1.7.1.min.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="bower_components/rainbow/js/rainbow.min.js"></script>
         <script src="bower_components/rainbow/js/language/generic.js"></script>
@@ -64,19 +62,25 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
         <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/app.js"></script>
+        <script src="bower_components/gs-ui-infra/app/scripts/filters/i18n.js"></script>
+        <script src="bower_components/gs-ui-infra/app/scripts/services/i18next.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/directives/gsGauge.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/directives/topology.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/directives/gsPieChart.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/services/utils.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/services/layout.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/services/render.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/gauges.js"></script>
         <script src="scripts/controllers/topology.js"></script>
         <script src="scripts/directives/codeblock.js"></script>
         <script src="scripts/controllers/GsPieChart.js"></script>
+        <script src="scripts/controllers/I18N.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

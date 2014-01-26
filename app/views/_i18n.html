@@ -1,0 +1,49 @@
+<!-- TODO turn into template/directive for each component -->
+<div id="i18n" class="component grid-100" ng-controller="I18nCtrl">
+    <h3 class="heading grid-100">I18N</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <h4>{{ 'title' | i18n }}</h4>
+                <p>{{ 'paragraph' | i18n }}</p>
+            </div>
+        </div>
+        <hr/>
+        <div class="controls grid-100">
+            <button ng-click="translate()">English</button>
+            <button ng-click="translate()">German</button>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <h4>How to use it</h4>
+        <ul>
+            <li>Include translation files for each of the desired locales, with the appropriate keys. The files should
+                reside under <code>app/i18n</code>, and follow the below naming convention:
+                <ul>
+                    <li>
+                        <code>constants_[locale].json</code> for constants.
+                    </li>
+                    <li>
+                        <code>messages_[locale].json</code> for messages (allows for variable injection).
+                    </li>
+                </ul>
+                The translation files format is as follows:
+                <div codeblock source="translation.code" language="translation.language"></div>
+                where keys are used as placeholders in the views and templates, and values are the translated
+                permutations for each locale.
+            </li>
+            <li>TODO example of a placeholder expression in a view</li>
+        </ul>
+        <p>See the <a href="http://i18next.com/">I18Next website</a> for a reference on further configuration.</p>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <!-- TODO correct language attribute not being injected into directive -->
+                <div codeblock language="tab.language" source="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>

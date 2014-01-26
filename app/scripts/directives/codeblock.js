@@ -7,22 +7,33 @@ angular.module('gsUiKsApp')
             restrict: 'A',
             replace: true,
             scope: true,
-            link: function(scope, element, attrs) {
+            link: function (scope, element, attrs) {
 
                 var codeEl = element.find('code');
-                codeEl.attr('data-language', attrs.language);
 
-                function setCode( code ){
-                    if ( !!code ){
+                function setCode(code) {
+                    if (!!code) {
                         codeEl.html(code);
                     }
                 }
 
-                scope.$watch(attrs.source, function(value) {
-                    setCode(value);
+                function setLanguage(lang) {
+                    if (!!lang) {
+                        codeEl.attr('data-language', lang);
+                    }
+                }
+
+                scope.$watch(attrs.source, function (n, o) {
+                    setCode(n);
                 });
 
-                setCode( scope[attrs.source]); // first initialization
+                scope.$watch(attrs.language, function (n, o) {
+                    setLanguage(n);
+                });
+
+                // first initialization
+                setCode(scope[attrs.source]);
+                setLanguage(scope[attrs.language]);
 
 
                 timer(function () {
