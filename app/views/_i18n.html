@@ -11,8 +11,10 @@
         </div>
         <hr/>
         <div class="controls grid-100">
-            <button ng-click="translate()">English</button>
-            <button ng-click="translate()">German</button>
+            <span class="pull-right">
+            <button ng-repeat="t in translations"
+                    class="btn btn-info" ng-click="translate()">{{ t.title }}</button>
+            </span>
         </div>
     </div>
     <div class="description grid-50">
