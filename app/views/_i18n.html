@@ -19,25 +19,30 @@
         </div>
     </div>
     <div class="description grid-50">
+
         <h4>How to use it</h4>
+        <p>
+            Include translation files for each of the desired locales, with the appropriate keys. The files should
+            reside under <code>[web oot context]/i18n</code> (<code>app/i18n</code> for yeonam projects), and follow
+            the below naming convention:
+        </p>
         <ul>
-            <li>Include translation files for each of the desired locales, with the appropriate keys. The files should
-                reside under <code>[web oot context]/i18n</code> (<code>app/i18n</code> for yeonam projects), and follow
-                the below naming convention:
-                <ul>
-                    <li>
-                        <code>constants_[locale].json</code> for constants.
-                    </li>
-                    <li>
-                        <code>messages_[locale].json</code> for messages (allows for variable injection).
-                    </li>
-                </ul>
-                The translation files format is as follows:
-                <div codeblock source="translationFile.code" language="translationFile.language"></div>
-                where keys are used as placeholders in the views and templates, and values are the translated
-                permutations for each locale.
+            <li>
+                <code>constants_[locale].json</code> for constants.
+            </li>
+            <li>
+                <code>messages_[locale].json</code> for messages (allows for variable injection).
             </li>
         </ul>
+        <p>
+        The translation files format is as follows:
+        </p>
+        <div codeblock source="translationFile.code" language="translationFile.language"></div>
+        <p>
+            where keys are used as placeholders in the views and templates, and values are the translated
+            permutations for each locale.
+        </p>
+
         <h4>Dependencies</h4>
         <div codeblock language="language.html">&lt;script src="bower_components/i18next/release/i18next-1.7.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="bower_components/gs-ui-infra/app/scripts/filters/i18n.js"&gt;&lt;/script&gt;
