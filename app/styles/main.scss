@@ -126,10 +126,20 @@ footer {
   }
   &#i18n {
     .demo {
-      padding: .4em;
-      border: 1px solid #ddd;
-      background-color: #eee;
+      margin-top: 1em;
+      padding: .7em 1.4em;
+      border: 1px solid $color2;
+      background-color: $color1;
       font-style: italic;
+    }
+  }
+  &#pieCharts {
+    .demo {
+      padding: 1em;
+      svg {
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
 }
