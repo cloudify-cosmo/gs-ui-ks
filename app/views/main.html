@@ -7,24 +7,37 @@
 
 <div class="getting-started">
     <div class="grid-container">
+
         <h2>Getting Started</h2>
-
         <p>
-            Use this library by adding it to your bower in 1 command
-
+            Use this library by adding it to your bower with this command:
             <pre>bower install https://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git --save</pre>
-            You may refer to a specific tag / version by appending it to the url for example
+        </p>
+        <p>
+            You may refer to a specific tag / version by appending it to the URL, for example:
             <pre>bower install https://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git~0.1 --save</pre>
-
-            and then run
-            <code>bower install</code>
-
+        </p>
+        <p>
+            and then run <code>bower install</code>
         </p>
 
-        <h3>Dependencies</h3>
-
+        <h2>Dependencies</h2>
         <p>
-            This library depends on <span ng-repeat="d in dependencies"><span ng-show="$middle">, </span><span ng-show="$last"> and </span><a href="{{d.link}}">{{ d.name }}</a></span>.
+            This library depends on <span ng-repeat="d in dependencies"><span ng-show="$middle">, </span><span ng-show="$last"> and
+            </span><a href="{{d.link}}">{{ d.name }}</a></span> for its various modules.
+        </p>
+
+        <h2>Setup</h2>
+        <p>
+            Include the library's module in your app dependencies:
+            <div codeblock language="language.javascript">angular.module('myApp', ['gsUiInfra'])</div>
+        </p>
+        <p>
+            Load the main module in your <code>index.html</code>:
+            <div codeblock language="language.html">&lt;script src="bower_components/gs-ui-infra/app/scripts/app.js"&gt;&lt;/script&gt;</div>
+        </p>
+        <p>
+            Additional dependencies are required per component. Add them when necessary.
         </p>
     </div>
 </div>

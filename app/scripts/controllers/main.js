@@ -3,14 +3,19 @@
 angular.module('gsUiKsApp')
     .controller('MainCtrl', ['$scope', 'gs.config', 'I18next', function ($scope, gsConfig, I18next) {
 
+        $scope.language = {
+            html: gsConfig.codeblock.language.html,
+            javascript: gsConfig.codeblock.language.javascript
+        }
+
         $scope.tabsMeta = {
             view: {
                 title: 'View',
-                language: gsConfig.codeblock.language.html
+                language: $scope.language.html
             },
             controller: {
                 title: 'Controller',
-                language: gsConfig.codeblock.language.javascript
+                language: $scope.language.javascript
             }
         };
 

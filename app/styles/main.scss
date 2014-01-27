@@ -82,8 +82,8 @@ footer {
   color: $color6;
   background-color: $color1;
   box-shadow: 0 0 16px $textColor;
-  h3 {
-    font-size: 1.1em;
+  h2 {
+    font-size: 1.7em;
   }
 }
 
@@ -141,21 +141,22 @@ pre.codeblock {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.rainbow {
+  /* fixing conflict with bootstrap .close rule */
+  .close {
+    float: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-shadow: inherit;
+    opacity: inherit;
+    filter: inherit;
+  }
+}
+
 .tab-pane {
   .codeblock {
     margin-top: 0;
     height: 140px;
-    .rainbow {
-      /* fixing conflict with bootstrap .close rule */
-      .close {
-        float: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        text-shadow: inherit;
-        opacity: inherit;
-        filter: inherit;
-      }
-    }
   }
 }
