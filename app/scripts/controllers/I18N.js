@@ -10,15 +10,17 @@ angular.module('gsUiKsApp')
 
         $scope.translations = [
             {
-                title: 'English'
+                title: 'English',
+                lng: 'en'
             },
             {
-                title: 'German'
+                title: 'German',
+                lng: 'de'
             }
         ];
 
-        $scope.translate = function () {
-            I18next.setOptions({lng: 'de'});
+        $scope.translate = function (lng) {
+            I18next.setOptions({lng: lng});
         };
 
         $scope.tabs = [

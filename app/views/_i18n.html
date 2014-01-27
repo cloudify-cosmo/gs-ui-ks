@@ -12,8 +12,9 @@
         <hr/>
         <div class="controls grid-100">
             <span class="pull-right">
-            <button ng-repeat="t in translations"
-                    class="btn btn-info" ng-click="translate()">{{ t.title }}</button>
+                <button class="btn btn-info"
+                        ng-repeat="t in translations"
+                        ng-click="translate(t.lng)">{{ t.title }}</button>
             </span>
         </div>
     </div>
