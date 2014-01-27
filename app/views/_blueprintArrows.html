@@ -1,0 +1,54 @@
+<!-- blueprint arrows -->
+<div id="blueprintArrows" class="component grid-100" ng-controller="BlueprintarrowsCtrl">
+    <h3 class="heading grid-100">Blueprint Arrows</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <div class="area">
+                    <div class="bpContainer" droppable dropComplete="dropend()" dropOver="dropstart()">
+                        <div class="coordinates" blueprint:arrows="coordinates" color="#666" arrow="true" storke="2"></div>
+                        <div class="circle" ng-style="circle" data-ng-repeat="(elementid, circle) in circles" blueprint:coordinate draggable="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="controls grid-100">
+            <label>Positions</label>
+            <button ng-click="Shuffle()">Shuffle</button>
+        </div>
+        <br>
+    </div>
+    <div class="description grid-50">
+        <h4>Options</h4>
+        <dl>
+            <dt><code>blueprint:arrows</code> array</dt>
+            <dd>
+                Assign the coordinates of X,Y of each source and target elements (in this case, the circles).
+            </dd>
+            <dt><code>colors</code> string</dt>
+            <dd>
+                RGB or HEX color.
+            </dd>
+            <dt><code>arrow</code> boolean</dt>
+            <dd>
+                Choose if to display the arrow head.
+            </dd>
+            <dt><code>storke</code> number</dt>
+            <dd>
+                Size of the line by pixels
+            </dd>
+        </dl>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <!-- TODO correct language attribute not being injected into directive -->
+                <div codeblock language="tab.language" source="tab.content"></div codeblock>
+            </tab>
+        </tabset>
+    </div>
+</div>
+<!-- gauges end -->
