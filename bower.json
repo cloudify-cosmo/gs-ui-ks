@@ -1,27 +1,26 @@
 {
-  "name": "gsUiKs",
-  "version": "0.0.0",
-  "dependencies": {
-    "angular": "1.0.6",
-    "json3": "~3.2.4",
-    "es5-shim": "~2.0.8",
-    "angular-resource": "1.0.6",
-    "angular-cookies": "1.0.6",
-    "angular-sanitize": "1.0.6",
-    "rainbow": "1.1.9",
-    "unsemantic": "latest",
-    "angular-ui-codemirror": "0.0.5",
-    "gs-ui-infra": "git://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git",
-    "d3": "~3.3.8",
-    "raphael": "~2.1.2",
-    "angular-bootstrap": "0.4.0",
-    "jquery": "~2.1.0"
-  },
-  "devDependencies": {
-    "angular-mocks": "~1.0.5",
-    "angular-scenario": "~1.0.5"
-  },
-  "resolutions": {
-    "angular": "1.0.6"
-  }
+    "name": "gsUiKs",
+    "version": "0.0.0",
+    "dependencies": {
+        "angular": "~1.2.10",
+        "json3": "~3.2.4",
+        "es5-shim": "~2.0.8",
+        "angular-resource": "~1.2.10",
+        "angular-cookies": "~1.2.10",
+        "angular-sanitize": "~1.2.10",
+        "rainbow": "1.1.9",
+        "unsemantic": "latest",
+        "angular-ui-codemirror": "0.0.5",
+        "gs-ui-infra": "git://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git",
+        "d3": "~3.3.8",
+        "raphael": "~2.1.2",
+        "angular-bootstrap": "0.4.0",
+        "jquery": "~2.1.0",
+        "i18next": "~1.7.1",
+        "angular-route": "~1.2.10"
+    },
+    "devDependencies": {
+        "angular-mocks": "~1.2.10",
+        "angular-scenario": "~1.2.10"
+    }
 }

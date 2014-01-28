@@ -1,38 +1,40 @@
 {
-  "name": "gs-ui-ks",
-  "version": "1.0.0",
-  "dependencies": {
+    "name": "gs-ui-ks",
+    "version": "1.0.0",
+    "dependencies": {
 
-  },
+    },
     "scripts":{
         "test":"./node_modules/.bin/karma start --single-run --browsers PhantomJS"
     },
-  "devDependencies": {
-      "grunt": "*",
-      "grunt-contrib-copy": "*",
-      "grunt-contrib-concat": "*",
-      "grunt-contrib-coffee": "*",
-      "grunt-contrib-uglify": "*",
-      "grunt-contrib-compass": "*",
-      "grunt-contrib-jshint": "*",
-      "grunt-contrib-cssmin": "*",
-      "grunt-contrib-connect": "*",
-      "grunt-contrib-clean": "*",
-      "grunt-contrib-htmlmin": "*",
-      "grunt-contrib-imagemin": "*",
-      "grunt-contrib-livereload": "*",
-      "grunt-bower-requirejs": "*",
-      "grunt-usemin": "*",
-      "grunt-regarde": "*",
-      "grunt-rev": "*",
-      "grunt-karma": "*",
-      "karma-mocha":"*",
-      "grunt-open": "*",
-      "matchdep": "*",
-      "grunt-google-cdn": "*",
-      "grunt-ngmin": "*"
-  },
-  "engines": {
-    "node": ">=0.8.0"
-  }
+    "devDependencies": {
+        "express": "*",
+        "ejs": "*",
+        "grunt": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-coffee": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-htmlmin": "*",
+        "grunt-contrib-imagemin": "*",
+        "grunt-contrib-livereload": "*",
+        "grunt-bower-requirejs": "*",
+        "grunt-usemin": "*",
+        "grunt-regarde": "*",
+        "grunt-rev": "*",
+        "grunt-karma": "*",
+        "karma-mocha":"*",
+        "grunt-open": "*",
+        "matchdep": "*",
+        "grunt-google-cdn": "*",
+        "grunt-ngmin": "*"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
 }

@@ -3,32 +3,34 @@
 angular.module('gsUiKsApp')
     .directive('codeblock', ['$timeout', 'rainbow', function (timer, syntax) {
         return {
-            template: '<pre class="codeblock"><code></code></pre>',
-            restrict: 'A',
+            restrict: 'EA',
             replace: true,
-            scope: true,
-            link: function(scope, element, attrs) {
+            scope: {
+                source: '=',
+                language: '='
+            },
+            template: function (tElement, tAttrs) {
 
-                var codeEl = element.find('code');
-                codeEl.attr('data-language', attrs.language);
-
-                function setCode( code ){
-                    if ( !!code ){
-                        codeEl.html(code);
-                    }
+                // allow for 'source' to come from element content or from attribute
+                if (tElement.html()) {
+                    return '<pre class="codeblock"><code>' + tElement.html() + '</code></pre>';
                 }
+                return '<pre class="codeblock"><code>{{ source }}</code></pre>';
+            },
+            link: function (scope, element, attrs) {
 
-                scope.$watch(attrs.source, function(value) {
-                    setCode(value);
+                scope.$watch('source', function (n, o) {
+                    n && element.html(n);
                 });
 
-                setCode( scope[attrs.source]); // first initialization
+                scope.$watch('language', function (n, o) {
+                    n && element.attr('data-language', n);
+                });
 
-
+                // highlight should be performed outside the current event loop to prevent issues with tag parsing
                 timer(function () {
                     syntax.highlight(element);
                 }, 0);
-
             }
         };
     }]);

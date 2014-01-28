@@ -1,4 +1,3 @@
-
 /* our variables */
 $color1: #edf7fc;
 $color2: #78a8c9;
@@ -24,16 +23,10 @@ $codeblockBackground: #fafafa;
 @import './blueprintArrows';
 
 /* mixins */
-@mixin roundBorder ($radius) {
+@mixin roundBorder($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
-}
-
-/* reset */
-p {
-  margin: 0;
-  padding: 0;
 }
 
 /* helpers */
@@ -42,10 +35,11 @@ p {
 }
 
 /* baseline */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: .8em 0 .2em;
   color: $color6;
 }
+
 dl {
   dt {
     margin: .4em 0;
@@ -79,21 +73,24 @@ header {
     color: $color1;
   }
 }
+
 footer {
   height: 60px;
   padding: 1.2em;
   color: $color1;
   background-color: $color2;
 }
+
 .getting-started {
   padding: .4em 0 2em;
   color: $color6;
   background-color: $color1;
   box-shadow: 0 0 16px $textColor;
-  h3 {
-    font-size: 1.1em;
+  h2 {
+    font-size: 1.7em;
   }
 }
+
 .component {
   padding-top: 1em;
   h3+hr {
@@ -110,13 +107,17 @@ footer {
       float: left;
     }
     input[type='number'] {
-      width: 80px;
+      width: 64px;
+    }
+    button {
+      margin-left: 4px;
+      margin-right: 4px;
     }
   }
   &#topology {
     .demo,
     .CodeMirror {
-        height: 550px;
+      height: 550px;
     }
     .CodeMirror {
       @include roundBorder(4px);
@@ -127,15 +128,49 @@ footer {
       margin: .5em 0 .8em .8em;
     }
   }
+  &#i18n {
+    .demo {
+      margin-top: 1em;
+      padding: .7em 1.4em;
+      border: 1px solid $color2;
+      background-color: $color1;
+      font-style: italic;
+    }
+  }
+  &#pieCharts {
+    .demo {
+      padding: 1em;
+      svg {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 pre.codeblock {
+  margin: 8px auto;
   overflow: auto;
   background-color: $codeblockBackground;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.rainbow {
+  /* fixing conflict with bootstrap .close rule */
+  .close {
+    float: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-shadow: inherit;
+    opacity: inherit;
+    filter: inherit;
+  }
+}
+
 .tab-pane {
   .codeblock {
+    margin-top: 0;
     height: 140px;
   }
 }

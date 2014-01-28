@@ -1,5 +1,4 @@
 <!-- TODO turn into template/directive for each component -->
-<!-- gauges -->
 <div id="gauges" class="component grid-100" ng-controller="GaugesCtrl">
     <h3 class="heading grid-100">Gauge</h3>
     <hr/>
@@ -72,15 +71,16 @@
                 </dl>
             </dd>
         </dl>
+        <h4>Dependencies</h4>
+        <div codeblock language="language.html">&lt;script src="bower_components/raphael/raphael-min.js"&gt;&lt;/script&gt;
+&lt;script src="bower_components/gs-ui-infra/app/scripts/directives/gsGauge.js"&gt;&lt;/script&gt;</div>
     </div>
     <hr class="grid-100"/>
     <div class="source grid-100">
         <tabset>
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                <!-- TODO correct language attribute not being injected into directive -->
-                <div codeblock language="tab.language" source="tab.content"></div codeblock>
+                <div codeblock language="tab.language" source="tab.content"></div>
             </tab>
         </tabset>
     </div>
 </div>
-<!-- gauges end -->

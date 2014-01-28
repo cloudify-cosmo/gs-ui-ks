@@ -61,8 +61,8 @@ angular.module('gsUiKsApp')
         $scope.tabs = [
             // TODO is there a better way to get source code (perhaps $http or $resource)?
             {
-                title: $scope.tabsMeta.html.title,
-                content: '<ANY blueprint:arrows="{array}" color="{string}" arrow="{bool}" storke="{number}">... </ANY>'
+                title: $scope.tabsMeta.view.title,
+                content: '&lt;ANY blueprint:arrows=&quot;{array}&quot; color=&quot;{string}&quot; arrow=&quot;{bool}&quot; storke=&quot;{number}&quot;&gt;... &lt;/ANY&gt;'
             }
         ];
 
@@ -70,7 +70,7 @@ angular.module('gsUiKsApp')
         $scope.$watch("coordinates", function(coordinates){
             if(coordinates.length > 0 && !jsTabDisplay) {
                 $scope.tabs.push({
-                    title: $scope.tabsMeta.javascript.title,
+                    title: $scope.tabsMeta.controller.title,
                     content: '$scope.coordinates = ' + JSON.stringify(coordinates, $scope.themeReplacer, 2)
                 });
                 jsTabDisplay = true;
