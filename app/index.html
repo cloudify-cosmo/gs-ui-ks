@@ -13,22 +13,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
-
-
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/main.css -->
-
-
-
         <link rel="stylesheet" href="styles/main.css"/>
         <link rel="stylesheet" href="bower_components/rainbow/themes/github.css" />
         <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css"/>
-
-
         <!-- endbuild -->
-
-
     </head>
     <body ng-app="gsUiKsApp">
         <!--[if lt IE 7]>
@@ -44,6 +34,17 @@
 
         <!-- Add your site or application content here -->
         <div ng-view></div>
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/gauges.js"></script>
+        <script src="scripts/controllers/topology.js"></script>
+        <script src="scripts/directives/codeblock.js"></script>
+        <script src="scripts/controllers/GsPieChart.js"></script>
+        <script src="scripts/controllers/blueprintArrows.js"></script>
+        <script src="scripts/controllers/I18N.js"></script>
+        <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/jquery/jquery.js"></script>
@@ -74,17 +75,6 @@
         <script src="bower_components/gs-ui-infra/app/scripts/services/render.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/directives/blueprintArrows.js"></script>
         <script src="bower_components/gs-ui-infra/app/scripts/directives/dragdrop.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/gauges.js"></script>
-        <script src="scripts/controllers/topology.js"></script>
-        <script src="scripts/directives/codeblock.js"></script>
-        <script src="scripts/controllers/GsPieChart.js"></script>
-        <script src="scripts/controllers/blueprintArrows.js"></script>
-        <script src="scripts/controllers/I18N.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
