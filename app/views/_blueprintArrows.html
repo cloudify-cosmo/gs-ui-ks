@@ -1,4 +1,3 @@
-<!-- blueprint arrows -->
 <div id="blueprintArrows" class="component grid-100" ng-controller="BlueprintarrowsCtrl">
     <h3 class="heading grid-100">Blueprint Arrows</h3>
     <hr/>
@@ -15,8 +14,7 @@
         </div>
         <hr/>
         <div class="controls grid-100">
-            <label>Positions</label>
-            <button ng-click="Shuffle()">Shuffle</button>
+            <button class="btn btn-info pull-right" ng-click="Shuffle()">Shuffle</button>
         </div>
         <br>
     </div>
@@ -40,15 +38,16 @@
                 Size of the line by pixels
             </dd>
         </dl>
+        <h4>Dependencies</h4>
+        <div codeblock language="language.html">&lt;script src="bower_components/d3/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src="bower_components/gs-ui-infra/app/scripts/directives/blueprintArrows.js"&gt;&lt;/script&gt;</div>
     </div>
     <hr class="grid-100"/>
     <div class="source grid-100">
         <tabset>
             <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-                <!-- TODO correct language attribute not being injected into directive -->
-                <div codeblock language="tab.language" source="tab.content"></div codeblock>
+                <div codeblock language="tab.language" source="tab.content"></div>
             </tab>
         </tabset>
     </div>
 </div>
-<!-- gauges end -->

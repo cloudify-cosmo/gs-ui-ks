@@ -9,7 +9,7 @@ angular.module('gsUiKsApp')
                 source: '=',
                 language: '='
             },
-            template: function (tElement, tAttrs) {
+            template: function (tElement/*, tAttrs*/) {
 
                 // allow for 'source' to come from element content or from attribute
                 if (tElement.html()) {
@@ -17,14 +17,14 @@ angular.module('gsUiKsApp')
                 }
                 return '<pre class="codeblock"><code>{{ source }}</code></pre>';
             },
-            link: function (scope, element, attrs) {
+            link: function (scope, element/*, attrs*/) {
 
-                scope.$watch('source', function (n, o) {
-                    n && element.html(n);
+                scope.$watch('source', function (newValue/*, oldValue*/) {
+                    newValue && element.html(newValue);
                 });
 
-                scope.$watch('language', function (n, o) {
-                    n && element.attr('data-language', n);
+                scope.$watch('language', function (newValue/*, oldValue*/) {
+                    newValue && element.attr('data-language', newValue);
                 });
 
                 // highlight should be performed outside the current event loop to prevent issues with tag parsing

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('BlueprintarrowsCtrl', function ($scope, blueprintCoordinateService) {
+    .controller('BlueprintarrowsCtrl', ['$scope', 'blueprintCoordinateService', 'gs.config', function ($scope, blueprintCoordinateService, gsConfig) {
 
         $scope.count = 4;
 
@@ -38,16 +38,19 @@ angular.module('gsUiKsApp')
             var source = Math.round(Math.random() * $scope.count),
                 target = false;
 
-            setTarget();
             function setTarget() {
                 target = Math.round(Math.random() * $scope.count);
-                if(source == target)
+                if (source === target) {
                     setTarget();
+                }
             }
+
+            setTarget();
+
             return {
-                "source": source,
-                "target": target
-            }
+                source: source,
+                target: target
+            };
         }
 
         $scope.coordinates = blueprintCoordinateService.getCoordinates();
