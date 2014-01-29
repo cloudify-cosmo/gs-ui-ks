@@ -85,4 +85,4 @@ angular.module('gsUiKsApp')
             blueprintCoordinateService.draw();
         };
 
-    });
+    }]);
