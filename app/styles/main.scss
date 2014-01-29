@@ -1,17 +1,16 @@
 /* our variables */
 $color1: #edf7fc;
 $color2: #78a8c9;
-
 $color3: #6098bf;
 $color4: #5086ab;
 $color5: #007cbf;
 $color6: #0a66a3;
+$codeblockBackground: #fafafa;
 
-/* bootstrap customization */
+/* bootstrap override */
 $bodyBackground: #fff;
 $textColor: #555;
 $baseFontFamily: tahoma, arial, sans-serif;
-$codeblockBackground: #fafafa;
 
 /* TODO should we use compass_twitter_bootstrap_responsive ? */
 @import "compass_twitter_bootstrap";
@@ -21,6 +20,7 @@ $codeblockBackground: #fafafa;
 
 /* Includes */
 @import './blueprintArrows';
+
 
 /* mixins */
 @mixin roundBorder($radius) {
