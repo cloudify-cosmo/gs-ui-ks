@@ -6,7 +6,7 @@ angular.module('gsUiKsApp')
         $scope.translationFile = {
             code: '{\n\t"key": "value"\n}',
             language: gsConfig.codeblock.language.javascript
-        }
+        };
 
         $scope.translations = [
             {

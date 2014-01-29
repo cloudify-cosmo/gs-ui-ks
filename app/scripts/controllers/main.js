@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('MainCtrl', ['$scope', 'gs.config', 'I18next', function ($scope, gsConfig, I18next) {
+    .controller('MainCtrl', ['$scope', 'gs.config', function ($scope, gsConfig) {
 
         $scope.language = {
             html: gsConfig.codeblock.language.html,
             javascript: gsConfig.codeblock.language.javascript
-        }
+        };
 
         $scope.tabsMeta = {
             view: {
