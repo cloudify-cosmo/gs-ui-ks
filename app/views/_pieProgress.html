@@ -1,0 +1,73 @@
+<!-- blueprint arrows -->
+<div id="blueprintArrows" class="component grid-100" ng-controller="PieprogressCtrl">
+    <h3 class="heading grid-100">Pie Progress</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <!-- Example 1 -->
+                <div pie:progress="dataPie" class="piProgress" size="450">
+                    <div pie:progress="dataJump" class="piProgress insidePie" size="300"></div>
+                </div>
+                <!-- Example 2 -->
+                <div pie:progress="dataGradual" class="piProgress" size="100"></div>
+                <!-- Example 3 -->
+                <div pie:progress="dataGradual" class="piProgress" size="100">
+                    <div class="persents">{{ dataGradual.progress }}</div>
+                </div>
+                <!-- Example 4 -->
+                <div pie:progress="dataDown" class="piProgress" size="100">
+                    <div class="insideCircle">
+                        <p>{{ dataDown.down }}</p>
+                    </div>
+                </div>
+                <!-- Example 5 -->
+                <div pie:progress="dataJump" class="piProgress" size="100">
+                    <div pie:progress="dataDown" class="piProgress insideSmallPie" size="50"></div>
+                    <div pie:progress="dataGradual" class="piProgress insideTinyPie" size="20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <h4>Options</h4>
+        <dl>
+            <dt><code>pie:progress</code> array</dt>
+            <dd>
+                The data of the Pie Progress in associative array.
+            </dd>
+            <dt><code>size</code> number</dt>
+            <dd>
+                Size of pie represent Width and Height
+            </dd>
+        </dl>
+
+        <br>
+        <h4>Colors</h4>
+        <p>
+            To set a color for arc in the pie, you must define it on CSS.<br>
+            it must be in the same name as you defined it as a key name in the associative array,<br>
+            for example, your data is:
+            <div codeblock language="tab.language" source="dataPieExample"></div codeblock>
+            and your CSS should be:
+            <div codeblock language="tab.language" source="dataPieExampleCss"></div codeblock>
+        </p>
+
+        <br>
+        <h4>Mix it with HTML</h4>
+        <p>
+            You can modify it as you wish by inserting HTML code inside the Directive, like the example:
+            <div codeblock language="tab.language" source="dataHtmlExample"></div codeblock>
+        </p>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <!-- TODO correct language attribute not being injected into directive -->
+                <div codeblock language="tab.language" source="tab.content"></div codeblock>
+            </tab>
+        </tabset>
+    </div>
+</div>
+<!-- gauges end -->
