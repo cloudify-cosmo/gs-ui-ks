@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gsUiKsApp')
-    .controller('BlueprintarrowsCtrl', function ($scope, blueprintCoordinateService) {
+    .controller('BlueprintarrowsCtrl', ['$scope', 'blueprintCoordinateService', 'gs.config', function ($scope, blueprintCoordinateService, gsConfig) {
 
         $scope.count = 4;
 
@@ -64,7 +64,8 @@ angular.module('gsUiKsApp')
         $scope.tabs = [
             {
                 title: $scope.tabsMeta.view.title,
-                content: '&lt;ANY blueprint:arrows=&quot;{array}&quot; color=&quot;{string}&quot; arrow=&quot;{bool}&quot; storke=&quot;{number}&quot;&gt;... &lt;/ANY&gt;'
+                content: '&lt;ANY blueprint:arrows=&quot;{array}&quot; color=&quot;{string}&quot; arrow=&quot;{bool}&quot; storke=&quot;{number}&quot;&gt;... &lt;/ANY&gt;',
+                language: gsConfig.codeblock.language.html
             }
         ];
 
@@ -73,7 +74,8 @@ angular.module('gsUiKsApp')
             if (coordinates.length > 0 && !jsTabDisplay) {
                 $scope.tabs.push({
                     title: $scope.tabsMeta.controller.title,
-                    content: '$scope.coordinates = ' + JSON.stringify(coordinates, $scope.themeReplacer, 2)
+                    content: '$scope.coordinates = ' + JSON.stringify(coordinates, $scope.themeReplacer, 2),
+                    language: gsConfig.codeblock.language.javascript
                 });
                 jsTabDisplay = true;
             }
@@ -84,4 +86,4 @@ angular.module('gsUiKsApp')
             blueprintCoordinateService.draw();
         };
 
-    });
+    }]);
