@@ -8,7 +8,16 @@
 <div class="getting-started">
     <div class="grid-container">
 
-        <h2>Getting Started</h2>
+        <h1>Getting Started</h1>
+
+        <h2>Dependencies</h2>
+        <p>
+            This library relies on <span ng-repeat="d in dependencies"><span ng-show="$middle">, </span><span ng-show="$last"> and
+            </span><a href="{{d.link}}">{{ d.name }}</a></span> for its various components. Additional dependencies are
+            required per component. Add them as necessary.
+        </p>
+
+        <h2>Installation</h2>
         <p>
             Use this library by adding it to your bower with this command:
             <pre>bower install https://github.com/guy-mograbi-at-gigaspaces/gs-ui-infra.git --save</pre>
@@ -31,28 +40,20 @@
             <pre>bower install</pre>
         </p>
 
-        <h2>Dependencies</h2>
-        <p>
-            This library depends on <span ng-repeat="d in dependencies"><span ng-show="$middle">, </span><span ng-show="$last"> and
-            </span><a href="{{d.link}}">{{ d.name }}</a></span> for its various modules.
-        </p>
-
         <h2>Setup</h2>
         <p>
             Include the library's module in your app dependencies:
-            <div codeblock language="language.javascript">angular.module('myApp', ['gsUiInfra'])</div>
+        <div codeblock language="language.javascript">angular.module('myApp', ['gsUiInfra'])</div>
         </p>
         <p>
             Load the main module in your <code>index.html</code>:
-            <div codeblock language="language.html">&lt;script src="bower_components/gs-ui-infra/app/scripts/app.js"&gt;&lt;/script&gt;</div>
+        <div codeblock language="language.html">&lt;script src="bower_components/gs-ui-infra/app/scripts/app.js"&gt;&lt;/script&gt;</div>
         </p>
-        <p>
-            Additional dependencies are required per component. Add them when necessary.
-        </p>
+
     </div>
 </div>
 
-<div class="grid-container">
+<section class="directives grid-container">
 
     <h2>Directives</h2>
     <div ng-include="'views/_pieProgress.html'"></div>
@@ -60,12 +61,12 @@
     <div ng-include="'views/_blueprintArrows.html'"></div>
     <!--<div ng-include="'views/_blueprint.html'" ></div>-->
     <div ng-include="'views/_gsPieChart.html'"></div>
-</div>
+</section>
 
-<div class="grid-container">
+<section class="filters grid-container">
     <h2>Filters</h2>
     <div ng-include="'views/_i18n.html'"></div>
-</div>
+</section>
 
 <footer>
     <div class="grid-container">
