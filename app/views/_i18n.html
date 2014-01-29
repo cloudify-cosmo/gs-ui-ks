@@ -24,14 +24,17 @@
         <p>
             Include translation files for each of the desired locales, with the appropriate keys. The files should
             reside under <code>[web oot context]/i18n</code> (<code>app/i18n</code> for yeonam projects), and follow
-            the below naming convention:
+            either of the below naming convention:
         </p>
         <ul>
             <li>
-                <code>constants_[locale].json</code> for constants.
+                <code>translations_[locale].json</code> (default, no further configuration required).
             </li>
             <li>
-                <code>messages_[locale].json</code> for messages (allows for variable injection).
+                <code>constants_[locale].json</code>.
+            </li>
+            <li>
+                <code>messages_[locale].json</code>.
             </li>
         </ul>
         <p>
@@ -41,6 +44,11 @@
         <p>
             where keys are used as placeholders in the views and templates, and values are the translated
             permutations for each locale.
+        </p>
+
+        <h4>Setup</h4>
+        <p>
+        <pre>bower install i18next --save</pre>
         </p>
 
         <h4>Dependencies</h4>
