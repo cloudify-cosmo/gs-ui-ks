@@ -1,0 +1,76 @@
+.piProgress {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px 5px 0;
+
+    .insidePie {
+        position: absolute;
+        top: 75px;
+        left: 75px;
+    }
+
+    .insideSmallPie {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+
+    .insideTinyPie {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    .insideCircle {
+        position: absolute;
+        display: box;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        box-pack: center;
+        box-align: center;
+        background-color: #0d3349;
+        color: #fff;
+        p {
+            display: block;
+            margin: 15px 0px;
+            text-align: center;
+        }
+        p::after {
+            content: "%";
+        }
+    }
+
+    .persents {
+        position: relative;
+        display: block;
+        top: 60px;
+        left: 0px;
+        font-weight: bold;
+        font-size: 15px;
+        color: #46b8da;
+        text-align: center;
+        &::after {
+            content: "%";
+        }
+    }
+
+    /* Colors controled by names */
+    path.progress {
+        fill: #46b8da;
+    }
+    path.succeed {
+        fill: #cce80b;
+    }
+    path.error {
+        fill: #d54931;
+    }
+    path.warning {
+        fill: #feb300;
+    }
+    path.inside {
+        fill: #B00040;
+    }
+}

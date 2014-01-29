@@ -9,8 +9,8 @@ angular.module('gsUiKsApp')
             $scope.circles = [];
             for (var i = 0; i < $scope.count; i++) {
                 $scope.circles.push({
-                    top: (Math.random() * 450) + "px",
-                    left: (Math.random() * 450) + "px"
+                    top: (Math.random() * 450) + 'px',
+                    left: (Math.random() * 450) + 'px'
                 });
             }
             blueprintCoordinateService.draw();
@@ -19,15 +19,15 @@ angular.module('gsUiKsApp')
         $scope.Shuffle = function () {
             $scope.circles.forEach(function (o, i) {
                 $scope.circles[i] = {
-                    top: (Math.random() * 450) + "px",
-                    left: (Math.random() * 450) + "px"
+                    top: (Math.random() * 450) + 'px',
+                    left: (Math.random() * 450) + 'px'
                 };
             });
             blueprintCoordinateService.draw();
-        }
+        };
 
         function randomMap() {
-            $scope.map = []
+            $scope.map = [];
             for (var i = 0; i < $scope.count; i++) {
                 $scope.map.push(randomNumbers());
             }
@@ -52,7 +52,7 @@ angular.module('gsUiKsApp')
 
         $scope.coordinates = blueprintCoordinateService.getCoordinates();
 
-        $scope.$watch("count", function () {
+        $scope.$watch('count', function () {
             randomCircles();
             randomMap();
         });
@@ -67,7 +67,7 @@ angular.module('gsUiKsApp')
         ];
 
         var jsTabDisplay = false;
-        $scope.$watch("coordinates", function(coordinates){
+        $scope.$watch('coordinates', function(coordinates){
             if(coordinates.length > 0 && !jsTabDisplay) {
                 $scope.tabs.push({
                     title: $scope.tabsMeta.controller.title,
@@ -75,11 +75,11 @@ angular.module('gsUiKsApp')
                 });
                 jsTabDisplay = true;
             }
-        }, true)
+        }, true);
 
 
-        $scope.dropend = function( item ) {
+        $scope.dropend = function() {
             blueprintCoordinateService.draw();
-        }
+        };
 
     });

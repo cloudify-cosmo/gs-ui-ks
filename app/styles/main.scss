@@ -21,6 +21,7 @@ $codeblockBackground: #fafafa;
 
 /* Includes */
 @import './blueprintArrows';
+@import './pieProgress';
 
 /* mixins */
 @mixin roundBorder($radius) {
