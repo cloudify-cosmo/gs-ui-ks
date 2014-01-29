@@ -22,38 +22,38 @@ angular.module('gsUiKsApp')
         $scope.dataGradual = {
             'progress': 5
         };
-        var GradualDemo = function () {
+        var gradualDemo = function () {
             $scope.dataGradual.progress++;
             if ($scope.dataGradual.progress < 100) {
-                $timeout(GradualDemo, 30);
+                $timeout(gradualDemo, 30);
             }
             else {
                 $timeout(function () {
                     $scope.dataGradual.progress = 0;
-                    GradualDemo();
-                }, 4000)
+                    gradualDemo();
+                }, 4000);
             }
         };
-        $timeout(GradualDemo, 2000);
+        $timeout(gradualDemo, 2000);
 
 
         /* Example 4 */
         $scope.dataDown = {
             'down': 100
         };
-        var DownDemo = function () {
+        var downDemo = function () {
             $scope.dataDown.down--;
             if ($scope.dataDown.down > 0) {
-                $timeout(DownDemo, 500);
+                $timeout(downDemo, 500);
             }
             else {
                 $timeout(function () {
                     $scope.dataDown.down = 100;
-                    DownDemo();
-                }, 1000)
+                    downDemo();
+                }, 1000);
             }
         };
-        $timeout(DownDemo, 2000);
+        $timeout(downDemo, 2000);
 
 
         /* Example 5 */
