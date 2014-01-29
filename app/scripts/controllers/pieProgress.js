@@ -67,18 +67,20 @@ angular.module('gsUiKsApp')
         $timeout(JumpDemo, 2000);
 
 
-        $scope.dataPieExample = '$scope.dataPie = ' + JSON.stringify($scope.dataPie, $scope.themeReplacer, 2);
-        $scope.dataPieExampleCss = 'path.succeed { fill: <b style="color: #cce80b">#cce80b</b>; }';
-        $scope.dataHtmlExample = '&lt;div pie:progress=&quot;dataDown&quot; class=&quot;piProgress&quot; size=&quot;100&quot;&gt;<br>&nbsp;&nbsp;&lt;div class=&quot;insideCircle&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;{{ bind_Data }}&lt;/p&gt;<br>&nbsp;&nbsp;&lt;/div&gt;<br>&lt;/div&gt;';
+        $scope.dataPieExample = '$scope.dataPie = ' + JSON.stringify($scope.dataPie, $scope.themeReplacer, 4);
+        $scope.dataPieExampleCss = 'path.succeed {\n\tfill: #cce80b;\n}';
+        $scope.dataHtmlExample = '<div pie:progress="dataDown" class="piProgress" size="100">\n\t<div class="insideCircle">\n\t\t<p>{{ bind_Data }}</p>\n\t</div>\n</div>';
 
         $scope.tabs = [
             {
                 title: $scope.tabsMeta.view.title,
-                content: '&lt;div pie:progress=&quot;dataJump&quot; class=&quot;piProgress&quot; size=&quot;300&quot;&gt;&lt;/div&gt;'
+                content: '&lt;div pie:progress=&quot;dataJump&quot; class=&quot;piProgress&quot; size=&quot;300&quot;&gt;&lt;/div&gt;',
+                language: $scope.language.html
             },
             {
                 title: $scope.tabsMeta.controller.title,
-                content: $scope.dataPieExample
+                content: $scope.dataPieExample,
+                language: $scope.language.javascript
             }
         ];
 

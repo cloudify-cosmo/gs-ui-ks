@@ -74,7 +74,7 @@ angular.module('gsUiKsApp')
             if (coordinates.length > 0 && !jsTabDisplay) {
                 $scope.tabs.push({
                     title: $scope.tabsMeta.controller.title,
-                    content: '$scope.coordinates = ' + JSON.stringify(coordinates, $scope.themeReplacer, 2),
+                    content: '$scope.coordinates = ' + JSON.stringify(coordinates, $scope.themeReplacer, 4),
                     language: gsConfig.codeblock.language.javascript
                 });
                 jsTabDisplay = true;

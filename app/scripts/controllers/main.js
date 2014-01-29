@@ -5,6 +5,7 @@ angular.module('gsUiKsApp')
 
         $scope.language = {
             html: gsConfig.codeblock.language.html,
+            css: gsConfig.codeblock.language.css,
             javascript: gsConfig.codeblock.language.javascript
         };
 

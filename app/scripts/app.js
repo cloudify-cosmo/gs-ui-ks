@@ -24,6 +24,7 @@ angular.module('gsUiKsApp', ['ngRoute', 'ui.codemirror', 'ui.bootstrap', 'gsUiIn
         codeblock: {
             language: {
                 html: 'html',
+                css: 'css',
                 javascript: 'javascript'
             }
         },

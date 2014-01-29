@@ -50,7 +50,7 @@ angular.module('gsUiKsApp')
             },
             {
                 title: $scope.tabsMeta.controller.title,
-                content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 2),
+                content: '$scope.gauge = ' + JSON.stringify($scope.gauge, $scope.themeReplacer, 4),
                 language: gsConfig.codeblock.language.javascript
             }
         ];
