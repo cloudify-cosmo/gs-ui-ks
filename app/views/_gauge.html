@@ -32,10 +32,12 @@
         <hr/>
         <div class="controls grid-100">
             <label for="gauge-val">Value</label>
-            <input id="gauge-val" name="gauge-val" type="number" step="10" min="0" max="100"
+            <input class="form-control" id="gauge-val" name="gauge-val" type="number"
+                   step="10" min="0" max="100"
                    ng-model="gauge.val"/>
             <label for="gauge-anim">Sensitivity</label>
-            <input id="gauge-anim" name="gauge-anim" type="number" min="0" max="10"
+            <input class="form-control" id="gauge-anim" name="gauge-anim" type="number"
+                   min="0" max="10"
                    ng-model="gauge.sensitivity"/>
         </div>
     </div>
