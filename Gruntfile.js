@@ -162,7 +162,7 @@ module.exports = function (grunt) {
                     cssDir: '.tmp/bower_components/gs-ui-infra/app/styles',
                     imagesDir: '<%= yeoman.app %>/images',
                     javascriptsDir: '<%= yeoman.app %>/scripts',
-                    fontsDir: '<%= yeoman.app %>/bower_components/gs-ui-infra/assets/fonts',
+                    fontsDir: '<%= yeoman.app %>/styles/fonts',
                     importPath: '<%= yeoman.app %>/bower_components',
                     relativeAssets: true
                 },
@@ -294,8 +294,7 @@ module.exports = function (grunt) {
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                        '<%= yeoman.dist %>/styles/fonts/**/*.{eot,svg,ttf,woff}',
-                        '<%= yeoman.dist %>/fonts/**/*.{eot,svg,ttf,woff}'
+                        '<%= yeoman.dist %>/styles/fonts/**/*.{eot,svg,ttf,woff}'
                     ]
                 }
             }
@@ -313,8 +312,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             'i18n/{,*/}*.json',
                             'images/{,*/}*.{gif,webp}',
-                            'styles/fonts/**/*.{eot,svg,ttf,woff}',
-                            'bower_components/gs-ui-infra/assets/fonts/**/*.{eot,svg,ttf,woff}'
+                            'styles/fonts/**/*.{eot,svg,ttf,woff}'
                         ]
                     },
                     {
