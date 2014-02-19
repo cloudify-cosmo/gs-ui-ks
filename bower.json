@@ -16,7 +16,7 @@
     "raphael": "~2.1.2",
     "angular-bootstrap": "~0.10.0",
     "jquery": "~2.1.0",
-    "i18next": "~1.7.1",
+    "i18next": "~1.7.2",
     "angular-route": "1.2.10",
     "bootstrap-sass": "~3.0.2"
   },
@@ -25,7 +25,6 @@
     "angular-scenario": "1.2.10"
   },
   "resolutions": {
-    "jquery": "~2.1.0",
     "angular": "1.2.10"
   }
 }
