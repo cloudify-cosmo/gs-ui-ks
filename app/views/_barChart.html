@@ -1,0 +1,140 @@
+<!--<div id="barCharts" class="component grid-100" ng-controller="BarchartsCtrl">-->
+
+    <!--<nvd3-discrete-bar-chart-->
+            <!--data="barChart.data"-->
+            <!--color="barChart.color"-->
+            <!--id="exampleId2"-->
+            <!--width="800"-->
+            <!--height="400"-->
+            <!--tooltips="true"-->
+            <!--showXAxis="true"-->
+            <!--showYAxis="true"-->
+            <!--showValues="true">-->
+        <!--<svg></svg>-->
+    <!--</nvd3-discrete-bar-chart>-->
+
+<!--</div>-->
+
+<div id="barCharts" class="component grid-100" ng-controller="BarchartsCtrl">
+    <h3 class="heading grid-100">Bar Chart</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <nvd3-discrete-bar-chart
+                        data="data"
+                        color="colors"
+                        id="exampleId1"
+                        width="600"
+                        height="655"
+                        tooltips="true"
+                        showXAxis="true"
+                        showYAxis="true"
+                        showValues="true"
+                        showLegend="true"
+                        interactive="true"
+                        objectequality="true"
+                        >
+                    <svg></svg>
+                </nvd3-discrete-bar-chart>
+                <br>
+                <div><b>Event:</b> {{ messege }}</div>
+                <hr>
+                <h5>Micro Charts</h5>
+                <div class="col-md-5">
+                    <nvd3-discrete-bar-chart
+                            data="data"
+                            color="colors"
+                            id="exampleId2"
+                            width="250"
+                            height="120"
+                            tooltips="false"
+                            showXAxis="false"
+                            showYAxis="false"
+                            showValues="false"
+                            interactive="true"
+                            objectequality="true">
+                        <svg></svg>
+                    </nvd3-discrete-bar-chart>
+                </div>
+                <div class="col-md-5">
+                    <nvd3-discrete-bar-chart
+                            data="data"
+                            color="colors"
+                            id="exampleId3"
+                            width="250"
+                            height="120"
+                            tooltips="true"
+                            showXAxis="true"
+                            showYAxis="false"
+                            showValues="false"
+                            interactive="true"
+                            objectequality="true">
+                        <svg></svg>
+                    </nvd3-discrete-bar-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <div class="controls grid-100 form-inline">
+            <h4>Data</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th class="col-md-3">Value</th>
+                        <th class="col-md-1">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="data in data[0].values">
+                        <td>{{ data[0] }}</td>
+                        <td>{{ data[1] }}</td>
+                        <td><button type="submit" class="btn btn-danger btn-xs" ng-click="removeData(data)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <label class="sr-only" for="dataLabel">Label</label>
+                <input type="text" ng-model="dataLabel" class="form-control" id="dataLabel" placeholder="Enter label">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="dataValue">Value</label>
+                <input type="number" ng-model="dataValue" class="form-control" id="dataValue" placeholder="Value">
+            </div>
+            <button type="submit" class="btn btn-info" ng-click="addData()">Add Data</button>
+        </div>
+        <hr/>
+        <div class="controls grid-100 form-inline">
+            <h4>Colors</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Color</th>
+                        <th class="col-md-1">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="color in colors">
+                        <td>{{ color }}</td>
+                        <td><button type="submit" class="btn btn-danger btn-xs" ng-click="removeColor(color)">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <label class="sr-only" for="color">Color</label>
+                <input type="text" ng-model="color" class="form-control" id="color" placeholder="Enter color">
+            </div>
+            <button type="submit" class="btn btn-info" ng-click="addColor()">Add Color</button>
+        </div>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <div codeblock language="tab.language" source="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>
