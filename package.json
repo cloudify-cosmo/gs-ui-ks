@@ -4,8 +4,11 @@
     "dependencies": {
 
     },
-    "scripts":{
+    "desired_test_command" :{
         "test":"./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    },
+    "scripts":{
+
     },
     "devDependencies": {
         "express": "*",
