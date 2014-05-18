@@ -1,0 +1,64 @@
+<div id="barCharts" class="component grid-100" ng-controller="MultibarchartCtrl">
+    <h3 class="heading grid-100">Multi Bar Chart</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <nvd3-multi-bar-chart
+                        data="exampleData"
+                        id="multiBarChart"
+                        xAxisTickFormat="xAxisTickFormatFunction()"
+                        color="colorFunction"
+                        legendColor="colorFunction"
+                        showControls="true"
+                        showLegend="true"
+                        tooltips="false"
+                        width="550"
+                        height="550"
+                        showXAxis="true"
+                        showYAxis="true">
+                    <svg></svg>
+                </nvd3-multi-bar-chart>
+            </div>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <h4>Attributes Options</h4>
+        <dl>
+            <dt><code>data</code> array</dt>
+            <dd>
+                The data of the line chart.
+            </dd>
+            <dt><code>color</code> array / Function</dt>
+            <dd>
+                The colors set of the lines
+            </dd>
+            <dt><code>showControls</code> boolean</dt>
+            <dd>
+                Display Change mode from Grouped to Stacked
+            </dd>
+            <dt><code>tooltips</code> boolean</dt>
+            <dd>
+                If to display a tooltips or not
+            </dd>
+        </dl>
+        <h4>Dependencies</h4>
+        <div codeblock language="language.html">&lt;script src="bower_components/d3/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js&quot;&gt;&lt;/script&gt;</div>
+
+        <div class="controls grid-100 form-inline">
+            <h4>Links</h4>
+            <ol>
+                <li><a href="http://cmaurer.github.io/angularjs-nvd3-directives/multi.bar.chart.html">Multi Bar Chart documentation</a></li>
+            </ol>
+        </div>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <div codeblock language="tab.language" source="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>
