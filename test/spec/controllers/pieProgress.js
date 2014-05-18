@@ -9,12 +9,12 @@ describe('Controller: PieprogressCtrl', function () {
     scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    PieprogressCtrl = $controller('PieprogressCtrl', {
-      $scope: scope
-    });
-  }));
+//  beforeEach(inject(function ($controller, $rootScope) {
+//    scope = $rootScope.$new();
+//    PieprogressCtrl = $controller('PieprogressCtrl', {
+//      $scope: scope
+//    });
+//  }));
 
 //  it('should attach a list of awesomeThings to the scope', function () {
 //    expect(scope.awesomeThings.length).toBe(3);
