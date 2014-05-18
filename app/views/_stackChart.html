@@ -1,0 +1,59 @@
+<div id="barCharts" class="component grid-100" ng-controller="StackchartCtrl">
+    <h3 class="heading grid-100">Stack Chart</h3>
+    <hr/>
+    <div class="grid-50">
+        <div class="demo">
+            <div class="grid-container">
+                <nvd3-stacked-area-chart
+                        data="exampleData"
+                        id="stackChart"
+                        showXAxis="true"
+                        showYAxis="true"
+                        interpolate="basis-open"
+                        showLegend="true"
+                        width="650"
+                        height="600"
+                        margin="{left:50,top:20,bottom:150,right:12}"
+                        color="colorFunction"
+                        legendColor="colorFunction">
+                    <svg></svg>
+                </nvd3-stacked-area-chart>
+            </div>
+        </div>
+    </div>
+    <div class="description grid-50">
+        <h4>Attributes Options</h4>
+        <dl>
+            <dt><code>data</code> array</dt>
+            <dd>
+                The data of the line chart.
+            </dd>
+            <dt><code>color</code> array / Function</dt>
+            <dd>
+                The colors set of the lines
+            </dd>
+            <dt><code>tooltips</code> boolean</dt>
+            <dd>
+                If to display a tooltips or not
+            </dd>
+        </dl>
+        <h4>Dependencies</h4>
+        <div codeblock language="language.html">&lt;script src="bower_components/d3/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js&quot;&gt;&lt;/script&gt;</div>
+
+        <div class="controls grid-100 form-inline">
+            <h4>Links</h4>
+            <ol>
+                <li><a href="http://cmaurer.github.io/angularjs-nvd3-directives/stacked.area.chart.html">Stack Area documentation</a></li>
+            </ol>
+        </div>
+    </div>
+    <hr class="grid-100"/>
+    <div class="source grid-100">
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+                <div codeblock language="tab.language" source="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</div>
