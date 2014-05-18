@@ -496,6 +496,12 @@ angular.module('gsUiKsApp')
 
         $scope.colorFunction = ['#46b8da', '#cce80b', '#E01B5D'];
 
+        $scope.xAxisTickFormatFunction = function () {
+            return function (d) {
+                return d3.time.format('%x')(new Date(d));
+            };
+        };
+
         $scope.dataExample = '$scope.exampleData = ' + JSON.stringify([
             {
                 'key': 'Series 1',
