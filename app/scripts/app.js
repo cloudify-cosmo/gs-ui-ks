@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gsUiKsApp', ['ngRoute', 'ui.codemirror', 'ui.bootstrap', 'gsUiInfraApp'/*, 'nvd3ChartDirectives'*/])
+angular.module('gsUiKsApp', ['ngRoute', 'ui.codemirror', 'ui.bootstrap', 'nvd3ChartDirectives', 'gsUiInfraApp'])
     .config(function ($routeProvider/*, $locationProvider*/) {
         $routeProvider
             .when('/', {
