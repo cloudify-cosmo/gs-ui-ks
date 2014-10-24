@@ -27,7 +27,7 @@
     "angular-scenario": "1.2.10"
   },
   "resolutions": {
-    "angular": "1.2.14~",
+    "angular": "1.2.10",
     "d3": "~3.4.1"
   }
 }
