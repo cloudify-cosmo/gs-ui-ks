@@ -2,16 +2,15 @@
 
 describe('Controller: GaugesCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('gsUiKsApp'));
+    // load the controller's module
+    beforeEach(module('gsUiKsApp'));
 
 
-  var GaugesCtrl,
-    scope;
+//  var GaugesCtrl,
+//    scope;
 
 
-
-  // Initialize the controller and a mock scope
+    // Initialize the controller and a mock scope
 //  beforeEach(window.inject(function ($controller, $rootScope) {
 //    scope = $rootScope.$new();
 //    GaugesCtrl = $controller('GaugesCtrl', {

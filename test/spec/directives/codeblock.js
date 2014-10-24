@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Directive: codeblock', function () {
-  beforeEach(module('gsUiKsApp'));
+    beforeEach(module('gsUiKsApp'));
 
 //  var element;
 //

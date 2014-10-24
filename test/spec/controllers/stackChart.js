@@ -2,11 +2,11 @@
 
 describe('Controller: StackchartCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('gsUiKsApp'));
+    // load the controller's module
+    beforeEach(module('gsUiKsApp'));
 
-  var StackchartCtrl,
-    scope;
+//  var StackchartCtrl,
+//    scope;
 
 //  // Initialize the controller and a mock scope
 //  beforeEach(inject(function ($controller, $rootScope) {

@@ -2,13 +2,13 @@
 
 describe('Controller: BarchartsCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('gsUiKsApp'));
+    // load the controller's module
+    beforeEach(module('gsUiKsApp'));
 
-  var BarchartsCtrl,
-    scope;
+//  var BarchartsCtrl,
+//    scope;
 
-  // Initialize the controller and a mock scope
+    // Initialize the controller and a mock scope
 //  beforeEach(inject(function ($controller, $rootScope) {
 //    scope = $rootScope.$new();
 //    BarchartsCtrl = $controller('BarchartsCtrl', {

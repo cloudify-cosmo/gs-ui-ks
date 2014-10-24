@@ -14,8 +14,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/unsemantic.css -->
+        <link rel="stylesheet" href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-base.css"/>
+        <link rel="stylesheet" href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-responsive.css"/>
+        <!-- endbuild -->
+
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css"/>
+        <!-- endbuild -->
+
+        <!-- build:css styles/plugins.css -->
         <link rel="stylesheet" href="bower_components/rainbow/themes/github.css" />
         <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css" />
         <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css"/>
@@ -32,17 +40,20 @@
         <!-- Add your site or application content here -->
         <div ng-view></div>
 
-
-        <!-- build:js scripts/plugins.js -->
+        <!-- build:js scripts/angular.js -->
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/rainbow/js/rainbow.min.js"></script>
-        <script src="bower_components/rainbow/js/language/generic.js"></script>
-        <script src="bower_components/rainbow/js/language/html.js"></script>
-        <script src="bower_components/rainbow/js/language/css.js"></script>
-        <script src="bower_components/rainbow/js/language/javascript.js"></script>
-        <script src="bower_components/codemirror/lib/codemirror.js"></script>
-        <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+
+        <!--<script src="bower_components/rainbow/js/rainbow.min.js"></script>-->
+        <!--<script src="bower_components/rainbow/js/language/generic.js"></script>-->
+        <!--<script src="bower_components/rainbow/js/language/html.js"></script>-->
+        <!--<script src="bower_components/rainbow/js/language/css.js"></script>-->
+        <!--<script src="bower_components/rainbow/js/language/javascript.js"></script>-->
+        <!--<script src="bower_components/codemirror/lib/codemirror.js"></script>-->
+        <!--<script src="bower_components/codemirror/mode/javascript/javascript.js"></script>-->
         <script src="bower_components/d3/d3.min.js"></script>
         <script src="bower_components/nvd3/nv.d3.min.js"></script>
         <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.min.js"></script>
@@ -65,8 +76,8 @@
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-        <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+        <!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>-->
+        <!--<script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>-->
         <!-- endbuild -->
 
         <!-- build:js scripts/scripts.js -->
@@ -87,16 +98,5 @@
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq = [
-                ['_setAccount', 'UA-42806659-1'],
-                ['_trackPageview']
-            ];
-            (function (d, t) {
-                var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-                s.parentNode.insertBefore(g, s)
-            }(document, 'script'));
-        </script>
     </body>
 </html>

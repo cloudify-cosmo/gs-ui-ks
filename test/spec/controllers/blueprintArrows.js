@@ -2,13 +2,13 @@
 
 describe('Controller: BlueprintarrowsCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('gsUiKsApp'));
+    // load the controller's module
+    beforeEach(module('gsUiKsApp'));
 
-  var BlueprintarrowsCtrl,
-    scope;
+//  var BlueprintarrowsCtrl,
+//    scope;
 
-  // Initialize the controller and a mock scope
+    // Initialize the controller and a mock scope
 //  beforeEach(inject(function ($controller, $rootScope) {
 //    scope = $rootScope.$new();
 //    BlueprintarrowsCtrl = $controller('BlueprintarrowsCtrl', {
