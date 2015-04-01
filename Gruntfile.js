@@ -342,7 +342,17 @@ module.exports = function (grunt) {
                             'fonts/**/*',
                             'images/{,*/}*.{gif,webp,svg,PNG}',
                             'styles/fonts/*',
+
                             'data_digested.js'
+                        ]
+                    },
+                    {
+                        expand:true,
+                        dot: true,
+                        cwd: '<%=yeoman.app%>/bower_components/gs-ui-infra/assets/fonts/gigaspaces',
+                        dest: '<%=yeoman.dist%>/styles/fonts',
+                        src:[
+                            '*'
                         ]
                     },
                     {

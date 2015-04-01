@@ -15,7 +15,9 @@ angular.module('gsUiKsApp', ['ngRoute', 'ui.codemirror', 'ui.bootstrap', 'gsUiIn
         return {
             highlight: function (e) {
                 // see: http://craig.is/making/rainbows/
-                window.Rainbow.color(e);
+                try {
+                    window.Rainbow.color(e);
+                }
             }
         };
     })

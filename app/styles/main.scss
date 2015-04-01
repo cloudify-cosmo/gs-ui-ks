@@ -16,7 +16,7 @@ $text-color: #555;
 $font-size-base: 16px;
 $font-family-base: OpenSansRegular, tahoma, arial, sans-serif;
 
-@import "../bower_components/bootstrap-sass/lib/bootstrap";
+@import "../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap";
 @import "../bower_components/gs-ui-infra/app/styles/main";
 
 /* Includes */
