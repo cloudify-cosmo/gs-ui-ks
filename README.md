@@ -1,4 +1,6 @@
 
+* Master [![Circle CI](https://circleci.com/gh/cloudify-cosmo/gs-ui-ks/tree/master.svg?style=shield)](https://circleci.com/gh/cloudify-cosmo/gs-ui-ks/tree/master)
+
 # To set up projects like this one do the following:
 
 
